@@ -1,0 +1,5 @@
+~ start
+Bernard: Au fait, sympa, ta démarche, Gordon ![next=2] 
+Beauvoir: Ah ! Rien ne t'échappe, Gordon. C'est vingt ans de travail chez des moines Shao Lin![next=1.5]
+do Progress.write("nice_walk_done", true)
+=> END

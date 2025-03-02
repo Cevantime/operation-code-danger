@@ -1,0 +1,267 @@
+[gd_scene load_steps=29 format=3 uid="uid://dbxqhusn6b21w"]
+
+[ext_resource type="Script" uid="uid://0odci8kik7ff" path="res://ennemy/ennemy.gd" id="1_8dqw5"]
+[ext_resource type="Texture2D" uid="uid://cn721msm847r7" path="res://asset/ennemy/axel.png" id="1_12j10"]
+[ext_resource type="PackedScene" uid="uid://c0ur4jb8x8mm6" path="res://hurt_box.tscn" id="3_c481b"]
+[ext_resource type="PackedScene" uid="uid://bwvl4o4wwmsx4" path="res://lib/component/common/HealthComponent.tscn" id="3_f3frg"]
+[ext_resource type="Script" uid="uid://uuybs86gkrqs" path="res://addons/godot_states/SwitchableState.gd" id="5_lnkc2"]
+[ext_resource type="PackedScene" uid="uid://bvnu3rrigwl4j" path="res://ennemy/states/idle.tscn" id="5_nadui"]
+[ext_resource type="Script" uid="uid://b5mf1cxqxda26" path="res://addons/godot_states/StackedState.gd" id="7_hvimy"]
+[ext_resource type="PackedScene" uid="uid://82gqm47vbmta" path="res://ennemy/states/chasing/move_straight_toward_target.tscn" id="7_sy0yu"]
+[ext_resource type="PackedScene" uid="uid://dx7tvcwyc1bxt" path="res://ennemy/states/chasing/circle_around_target.tscn" id="8_55qm4"]
+[ext_resource type="Script" uid="uid://bmaqumxq2lio0" path="res://ennemy/states/chasing/control_approaching_distance.gd" id="9_8b4g7"]
+[ext_resource type="PackedScene" uid="uid://c8kqn8dnrcu4a" path="res://ennemy/states/shot_state.tscn" id="9_alik5"]
+[ext_resource type="PackedScene" uid="uid://c5ee02orffybs" path="res://ennemy/states/dead_state.tscn" id="10_2i6lh"]
+[ext_resource type="PackedScene" uid="uid://dn7g3mag1cmdl" path="res://ennemy/states/move_with_target_speed_state.tscn" id="11_8b4g7"]
+[ext_resource type="Script" uid="uid://d23dtqge7goht" path="res://ennemy/states/chasing/control_circling_distance.gd" id="11_8weke"]
+[ext_resource type="Script" uid="uid://bw42ofcxavj4m" path="res://ennemy/states/chasing/control_distance_moving_away.gd" id="12_acyfd"]
+[ext_resource type="Script" uid="uid://bsm54i7aoutxa" path="res://ennemy/states/chasing/react_to_attack_token.gd" id="13_8b4g7"]
+[ext_resource type="PackedScene" uid="uid://dsqoc63jmo5ay" path="res://ennemy/states/change_speed.tscn" id="13_bmoub"]
+[ext_resource type="PackedScene" uid="uid://dn0d0sf6v1vsb" path="res://ennemy/states/react_to_shot.tscn" id="13_nadui"]
+[ext_resource type="PackedScene" uid="uid://cut74xd61ivn4" path="res://ennemy/states/update_walk_animation.tscn" id="14_8b4g7"]
+[ext_resource type="PackedScene" uid="uid://doohsj8tghpad" path="res://ennemy/states/aim_position.tscn" id="14_nadui"]
+[ext_resource type="PackedScene" uid="uid://cbg6ocq25s3nm" path="res://ennemy/states/ennemy_state.tscn" id="15_8b4g7"]
+[ext_resource type="Theme" uid="uid://yfnao01xbome" path="res://gordon_theme.tres" id="21_p11tf"]
+[ext_resource type="PackedScene" uid="uid://bbrxa3xvllytb" path="res://ennemy/states/dodge.tscn" id="21_ryih1"]
+[ext_resource type="PackedScene" uid="uid://naq3n1o2dvt7" path="res://health_progress_bar.tscn" id="24_b7god"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f3frg"]
+radius = 6.0
+
+[sub_resource type="Animation" id="Animation_1i7u7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_mmf0m"]
+resource_name = "disappear"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4p5yn"]
+_data = {
+&"RESET": SubResource("Animation_1i7u7"),
+&"disappear": SubResource("Animation_mmf0m")
+}
+
+[node name="Ennemy" type="CharacterBody2D" groups=["ennemy"]]
+collision_layer = 16
+collision_mask = 3
+script = ExtResource("1_8dqw5")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 27)
+shape = SubResource("CircleShape2D_f3frg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+texture = ExtResource("1_12j10")
+hframes = 4
+vframes = 4
+frame = 11
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"output_section": true,
+"pending_changes": {},
+"slice_section": false
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": -1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://asset/ennemy",
+"o_name": "axel",
+"only_visible": false,
+"player": "AnimationPlayer",
+"slice": "",
+"source": "res://asset/ennemy/axel.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "2afa66861b33d108c55e9798e78663bf"
+
+[node name="HurtBox" parent="Sprite2D" instance=ExtResource("3_c481b")]
+position = Vector2(0, 27)
+collision_layer = 0
+
+[node name="RayCast2D" type="RayCast2D" parent="Sprite2D"]
+unique_name_in_owner = true
+position = Vector2(0, 27)
+target_position = Vector2(500, 0)
+collision_mask = 2
+
+[node name="DecisionTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.5
+autostart = true
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_f3frg")]
+unique_name_in_owner = true
+
+[node name="GlobalAnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_4p5yn")
+}
+
+[node name="States" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_lnkc2")
+
+[node name="Idle" parent="States" instance=ExtResource("5_nadui")]
+
+[node name="Chasing" type="Node" parent="States"]
+script = ExtResource("7_hvimy")
+
+[node name="SwitchableState" type="Node" parent="States/Chasing"]
+script = ExtResource("5_lnkc2")
+
+[node name="Approaching" type="Node" parent="States/Chasing/SwitchableState"]
+script = ExtResource("7_hvimy")
+
+[node name="MoveToPlayer" parent="States/Chasing/SwitchableState/Approaching" instance=ExtResource("7_sy0yu")]
+
+[node name="ControlDistanceState" parent="States/Chasing/SwitchableState/Approaching" instance=ExtResource("15_8b4g7")]
+script = ExtResource("9_8b4g7")
+minimum_distance = 60.0
+
+[node name="Circling" type="Node" parent="States/Chasing/SwitchableState"]
+script = ExtResource("7_hvimy")
+
+[node name="Circling" parent="States/Chasing/SwitchableState/Circling" instance=ExtResource("8_55qm4")]
+
+[node name="ControlDistance" parent="States/Chasing/SwitchableState/Circling" instance=ExtResource("15_8b4g7")]
+script = ExtResource("11_8weke")
+minimum_distance = 50.0
+maximum_distance = 60.0
+
+[node name="ChangeSpeed" parent="States/Chasing/SwitchableState/Circling" instance=ExtResource("13_bmoub")]
+speed = 1.5
+
+[node name="MovingAway" type="Node" parent="States/Chasing/SwitchableState"]
+script = ExtResource("7_hvimy")
+
+[node name="MoveAwayFromPlayer" parent="States/Chasing/SwitchableState/MovingAway" instance=ExtResource("7_sy0yu")]
+closer = false
+
+[node name="ControlDistance" parent="States/Chasing/SwitchableState/MovingAway" instance=ExtResource("15_8b4g7")]
+script = ExtResource("12_acyfd")
+maximum_distance = 80.0
+
+[node name="MoveWithTargetSpeedState" parent="States/Chasing" instance=ExtResource("11_8b4g7")]
+
+[node name="UpdateWalkAnimation" parent="States/Chasing" instance=ExtResource("14_8b4g7")]
+
+[node name="ReactToAttackToken" parent="States/Chasing" instance=ExtResource("15_8b4g7")]
+script = ExtResource("13_8b4g7")
+
+[node name="ReactToShot" parent="States/Chasing" instance=ExtResource("13_nadui")]
+
+[node name="Fighting" type="Node" parent="States"]
+script = ExtResource("7_hvimy")
+
+[node name="AimPosition" parent="States/Fighting" instance=ExtResource("14_nadui")]
+
+[node name="MoveWithTargetSpeed" parent="States/Fighting" instance=ExtResource("11_8b4g7")]
+
+[node name="UpdateWalkAnimation" parent="States/Fighting" instance=ExtResource("14_8b4g7")]
+
+[node name="ReactToShot" parent="States/Fighting" instance=ExtResource("13_nadui")]
+
+[node name="ChangeSpeed" parent="States/Fighting" instance=ExtResource("13_bmoub")]
+speed = 1.3
+
+[node name="Shot" type="Node" parent="States"]
+script = ExtResource("7_hvimy")
+
+[node name="Shot" parent="States/Shot" instance=ExtResource("9_alik5")]
+
+[node name="Dodge" parent="States" instance=ExtResource("21_ryih1")]
+
+[node name="Dead" type="Node" parent="States"]
+script = ExtResource("7_hvimy")
+
+[node name="Dead" parent="States/Dead" instance=ExtResource("10_2i6lh")]
+
+[node name="Controlled" type="Node" parent="States"]
+script = ExtResource("7_hvimy")
+
+[node name="MoveWithTargetSpeedState" parent="States/Controlled" instance=ExtResource("11_8b4g7")]
+
+[node name="UpdateWalkAnimation" parent="States/Controlled" instance=ExtResource("14_8b4g7")]
+
+[node name="ReactToShot" parent="States/Controlled" instance=ExtResource("13_nadui")]
+chances_to_dodge = 0.0
+
+[node name="DebugControl" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -22.0
+offset_top = -61.0
+offset_right = 18.0
+offset_bottom = -21.0
+theme = ExtResource("21_p11tf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DebugControl"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StateLabel" type="Label" parent="DebugControl/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "state"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TokenLabel" type="Label" parent="DebugControl/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "token
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HealthProgressBar" parent="DebugControl" instance=ExtResource("24_b7god")]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -9.0
+offset_right = 42.0
+value_node_path = NodePath("../../HealthComponent")
+
+[node name="DeathAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="timeout" from="DecisionTimer" to="." method="_on_decision_timer_timeout"]
+[connection signal="died" from="HealthComponent" to="." method="_on_health_component_died"]

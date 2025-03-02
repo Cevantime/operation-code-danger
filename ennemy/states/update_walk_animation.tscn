@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cut74xd61ivn4"]
+
+[ext_resource type="PackedScene" uid="uid://cbg6ocq25s3nm" path="res://ennemy/states/ennemy_state.tscn" id="1_g8qd4"]
+[ext_resource type="Script" path="res://ennemy/states/update_walk_animation.gd" id="2_l08u5"]
+
+[node name="UpdateWalkAnimation" instance=ExtResource("1_g8qd4")]
+script = ExtResource("2_l08u5")

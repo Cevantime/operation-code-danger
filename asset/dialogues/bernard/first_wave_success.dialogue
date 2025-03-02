@@ -1,0 +1,8 @@
+~ start
+do! play("bernard/ha ha ha")
+Bernard: Ha ! Ha ! Ha ! Alors, qu'en dis-tu Gordon ? Pas mal, non ?[next=1.5]
+Beauvoir: Tu m'impressionneras toujours, Gordon.[next=1]
+Beauvoir: Si tu manipules ton joujou aussi bien que tu réfléchis, tu devrais finir cette mission sans problème, Gordon.[next=2.5]
+Bernard: J'y compte bien, Gordon ![next=1]
+do Progress.write("first_wave_success", true)
+=> END

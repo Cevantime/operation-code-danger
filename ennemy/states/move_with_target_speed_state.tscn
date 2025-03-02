@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn7g3mag1cmdl"]
+
+[ext_resource type="PackedScene" uid="uid://cbg6ocq25s3nm" path="res://ennemy/states/ennemy_state.tscn" id="1_clh73"]
+[ext_resource type="Script" path="res://ennemy/states/move_with_target_speed.gd" id="2_ufqjf"]
+
+[node name="MoveWithTargetSpeedState" instance=ExtResource("1_clh73")]
+script = ExtResource("2_ufqjf")

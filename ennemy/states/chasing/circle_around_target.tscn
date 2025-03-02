@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx7tvcwyc1bxt"]
+
+[ext_resource type="PackedScene" uid="uid://cbg6ocq25s3nm" path="res://ennemy/states/ennemy_state.tscn" id="1_tf7qh"]
+[ext_resource type="Script" path="res://ennemy/states/chasing/circle_around_target.gd" id="2_nvsgc"]
+[ext_resource type="PackedScene" uid="uid://0x184yfp6is4" path="res://lib/timers/random_range_time.tscn" id="3_nvsgc"]
+
+[node name="Circling" instance=ExtResource("1_tf7qh")]
+script = ExtResource("2_nvsgc")
+
+[node name="RandomRangeTimer" parent="." index="0" instance=ExtResource("3_nvsgc")]
+min_wait_time = 3.0
+max_wait_time = 5.0
+
+[connection signal="timeout" from="RandomRangeTimer" to="." method="_on_random_range_timer_timeout"]

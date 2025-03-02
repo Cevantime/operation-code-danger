@@ -1,0 +1,20 @@
+~ start
+do gordon.controlled = false
+do gordon.go_right()
+do wait(1.5)
+do! play("bernard/oh mon dieu")
+Bernard: Gordon, je... je... ? [next=1]
+do! play("beauvoir/gordon")
+Beauvoir: Approche, Gordon ! N'aie pas peur ![next=1.5]
+do wait(1)
+do gordon.stop()
+Beauvoir: Salue ton public, Gordon ! [next=2.0]
+do! play("bernard/oh que oui")
+Bernard: Oh que oui ![next=1.0]
+do gordon.salute()
+do wait(2.0)
+do gordon.salute(false)
+do wait(2.0)
+do gordon.salute()
+do Progress.write("salute_done", true)
+=> END

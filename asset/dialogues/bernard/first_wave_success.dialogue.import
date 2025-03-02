@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://7fyn6up1g3hv"
+path="res://.godot/imported/first_wave_success.dialogue-01e6e0091c4bdc337746180546b4ca3d.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/bernard/first_wave_success.dialogue"
+dest_files=["res://.godot/imported/first_wave_success.dialogue-01e6e0091c4bdc337746180546b4ca3d.tres"]
+
+[params]
+
+defaults=true

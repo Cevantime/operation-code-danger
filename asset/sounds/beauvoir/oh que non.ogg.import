@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://do0437yo723wk"
+path="res://.godot/imported/oh que non.ogg-7c7f207d8e5b2b2d57a00b37b820fd63.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/sounds/beauvoir/oh que non.ogg"
+dest_files=["res://.godot/imported/oh que non.ogg-7c7f207d8e5b2b2d57a00b37b820fd63.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://no05156n0c8n"
+path="res://.godot/imported/oui gordon.ogg-5af2006dfd8fa6c8dfb04600c24d7a08.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/sounds/bernard/oui gordon.ogg"
+dest_files=["res://.godot/imported/oui gordon.ogg-5af2006dfd8fa6c8dfb04600c24d7a08.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

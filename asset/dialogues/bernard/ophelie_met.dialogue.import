@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b58fxqkpxj5et"
+path="res://.godot/imported/ophelie_met.dialogue-f31125549b88141e6b4e750725f27a67.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/bernard/ophelie_met.dialogue"
+dest_files=["res://.godot/imported/ophelie_met.dialogue-f31125549b88141e6b4e750725f27a67.tres"]
+
+[params]
+
+defaults=true

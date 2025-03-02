@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://st4lrcqju3fm"
+path="res://.godot/imported/salute.dialogue-3a28a7af99638e6ddd245126e6c42d5d.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/bernard/salute.dialogue"
+dest_files=["res://.godot/imported/salute.dialogue-3a28a7af99638e6ddd245126e6c42d5d.tres"]
+
+[params]
+
+defaults=true

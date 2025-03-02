@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dtjtgyr0kc06v"
+path="res://.godot/imported/first_spectator_met.dialogue-3b3b281ce5caf7cf8f3507d607db238b.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/beauvoir/first_spectator_met.dialogue"
+dest_files=["res://.godot/imported/first_spectator_met.dialogue-3b3b281ce5caf7cf8f3507d607db238b.tres"]
+
+[params]
+
+defaults=true

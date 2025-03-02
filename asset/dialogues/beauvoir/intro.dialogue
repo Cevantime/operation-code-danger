@@ -1,0 +1,79 @@
+~ beginning
+do wait(1)
+do! gordon.spawn_and_crouch()
+Beauvoir: YYYYAAAAAHHHH !!![next=2]
+do gordon.go_left()
+do wait(0.3)
+do gordon.stop()
+do wait(0.5)
+do gordon.go_right()
+do wait(0.3)
+do gordon.stop()
+do! play("beauvoir/hein")
+do gordon.play_emotion("surprised")
+do wait(0.3)
+do! play("beauvoir/gordon")
+Beauvoir: Gordon ? Gordon, tu me reçois ? [next=2]
+do! play("bernard/gordon")
+Bernard: Gordon ! Gordon, tu es là ? Appuie sur la touche [img]{{ get_action_icon("next_dialogue") }}[/img], si c'est le cas ![next=2]
+do! play("beauvoir/mais qu est ce que c est")
+do gordon.play_emotion("question")
+Beauvoir: La touche [img]{{ get_action_icon("next_dialogue") }}[/img] ? Mais pourquoi faire ?[next=1]
+Bernard: Juste fais-le, Gordon ![next=1]
+Beauvoir: La touche [img]{{ get_action_icon("next_dialogue") }}[/img], alors voyons voir...
+do wait(1.0)
+Beauvoir: C'est fait ![next=1]
+Bernard: C'était moins une, Gordon !
+Bernard: Apparemment, cela te permet de passer au dialogue suivant, Gordon !
+do! play("beauvoir/ha ha ha")
+Beauvoir: Brillant, Gordon ! Tu es bien le plus intelligent de nous deux, Gordon !
+Bernard: Si il y a bien une personne plus intelligente que l'autre parmi nous, Gordon, c'est bien toi !
+do! play("beauvoir/oh que non")
+Beauvoir: Mais non ![next=1.5]
+do! play("bernard/oh que oui")
+Bernard: Mais si ![next=1.5]
+do! play("beauvoir/ha ha ha")
+Beauvoir: Bon, comme tu voudras, Gordon.
+do gordon.go_left()
+do wait(0.1)
+do gordon.stop()
+do wait(0.5)
+do gordon.go_right()
+do wait(0.1)
+do gordon.stop()
+do wait(2.0)
+do gordon.play_emotion("question")
+Beauvoir: Tout cela ne me dit pas quel est cet endroit, Gordon.
+Bernard: Je n'en sais rien, Gordon mais... [next=1]
+do! play("bernard/oh mon dieu")
+Bernard: Oh nom de Dieu, Gordon !!
+do! gordon.play_emotion("surprised")
+do! play("beauvoir/gordon")
+Beauvoir: Mais qu'est-ce qu'il y a, Gordon ?
+Bernard: Crois-moi si tu veux, mais ça m'a tout l'air d'être... un [i]jeu vidéo promotionnel[/i], Gordon.
+do! gordon.play_emotion("surprised")
+do! play("beauvoir/mais qu est ce que c est")
+Beauvoir: Un [shake]jeu vidéo promotionnel[/shake] !?? Mais personne ne fait ça !
+do gordon.go_left()
+do wait(0.3)
+do gordon.stop()
+do wait(0.3)
+do gordon.go_right()
+do wait(0.3)
+do gordon.stop()
+do wait(1.0)
+do! play("bernard/c est affreux")
+Bernard: Cela ne me dit rien qui vaille, Gordon.
+do! play("beauvoir/oh que non")
+Beauvoir: Oh que non !
+Bernard: Il s'agit d'être prudent, Gordon.
+do! play("beauvoir/oh que oui")
+Beauvoir: Oh que oui !
+Bernard: Rejoins-moi au plus vite au Bouffon Théâtre !
+do gordon.play_emotion("question")
+do! play("beauvoir/mais qu est ce que c est")
+Beauvoir: Au Bouffon Théâtre ? Mais qu'est-ce que c'est que ça ?
+Bernard: C'est un charmant petit théâtre situé en plein coeur du 19e arrondissement de Paris.
+Bernard: Autrement dit, droit devant toi, Gordon ! Je t'y attends. Fais vite !
+do Progress.write("intro_done", true)
+=> END

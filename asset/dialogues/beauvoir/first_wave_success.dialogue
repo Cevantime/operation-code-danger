@@ -1,0 +1,16 @@
+~ start
+Bernard: Bien joué, Gordon ! Ces spectateurs en ont eu pour l'argent. [next=1.5]
+do! gordon.play_emotion("happy")
+Beauvoir: Je n'ai fait que jouer mon rôle, Gordon. [next=1.5]
+Bernard: C'était extrêmement émouvant, Gordon.[next=1.5]
+Beauvoir: Je suis sûr que tu exagères.[next=1]
+do! play("bernard/oh que non")
+Bernard: Mais non ![next=0.5]
+do! play("beauvoir/oh que oui")
+Beauvoir: Mais si ![next=0.5]
+do! play("bernard/oh que non")
+Bernard: Mais non ![next=0.5]
+do! play("beauvoir/ha ha ha")
+Beauvoir: Bien, j'imagine que c'est toi qui vois, Gordon. [next=1]
+do Progress.write("first_wave_success", true)
+=> END

@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5p5fufvyn7x5"]
+
+[ext_resource type="Texture2D" uid="uid://bmm2knug1liuc" path="res://asset/go.png" id="1_8r3o3"]
+[ext_resource type="Script" path="res://go_label.gd" id="1_jjqhc"]
+
+[sub_resource type="Animation" id="Animation_8r3o3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_jjqhc"]
+resource_name = "blink"
+length = 0.6
+loop_mode = 1
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8b68t"]
+_data = {
+&"RESET": SubResource("Animation_8r3o3"),
+&"blink": SubResource("Animation_jjqhc")
+}
+
+[node name="GoLabel" type="TextureRect"]
+visible = false
+offset_right = 160.0
+offset_bottom = 160.0
+texture = ExtResource("1_8r3o3")
+script = ExtResource("1_jjqhc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_8b68t")
+}

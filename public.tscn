@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0ivlcf6mi1hm"]
+
+[ext_resource type="Texture2D" uid="uid://ca5lwh52otc8o" path="res://public.png" id="1_for5q"]
+
+[sub_resource type="Animation" id="Animation_wmshy"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g7cm7"]
+_data = {
+&"default": SubResource("Animation_wmshy")
+}
+
+[node name="Public" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_for5q")
+hframes = 2
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"output_section": true,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": -1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"slice": "",
+"source": "res://asset/public.ase"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "6c87f74eb45736027bc6212dc27bca01"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_g7cm7")
+}
+autoplay = "default"

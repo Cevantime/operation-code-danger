@@ -1,0 +1,143 @@
+[gd_scene load_steps=10 format=3 uid="uid://kuhd7tp5si3w"]
+
+[ext_resource type="Theme" uid="uid://yfnao01xbome" path="res://gordon_theme.tres" id="1_ysev7"]
+[ext_resource type="Shader" uid="uid://d342xsletkdih" path="res://asset/synth_wave.gdshader" id="2_i640r"]
+[ext_resource type="Script" uid="uid://hw4yo4ur7bre" path="res://character_selection.gd" id="2_pwu4o"]
+[ext_resource type="Texture2D" uid="uid://bviq4tt6c2mhk" path="res://asset/sun.png" id="3_ve3h0"]
+[ext_resource type="Texture2D" uid="uid://dfre7vp3tqml5" path="res://asset/faces/beauvoir.png" id="4_i640r"]
+[ext_resource type="Texture2D" uid="uid://htj5tjklalen" path="res://asset/faces/bernard.png" id="6_yr170"]
+
+[sub_resource type="Gradient" id="Gradient_pwu4o"]
+colors = PackedColorArray(0.457047, 0, 0.167928, 1, 0.946181, 0.42565, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yr170"]
+gradient = SubResource("Gradient_pwu4o")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rr1ac"]
+shader = ExtResource("2_i640r")
+shader_parameter/texture_albedo = ExtResource("3_ve3h0")
+shader_parameter/color_top = Color(0.915181, 7.60466e-05, 0.708321, 1)
+shader_parameter/color_bottom = Color(0.638549, 0, 0.148811, 1)
+shader_parameter/position = 0.0
+shader_parameter/blend = 0.68
+shader_parameter/angle = 90.0
+shader_parameter/line_height_min = 0.01
+shader_parameter/line_height_max = 0.1
+shader_parameter/num_lines = 6
+shader_parameter/speed = 0.1
+shader_parameter/vertical_origin = 0.0
+
+[node name="CharacterSelectionControl" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ysev7")
+script = ExtResource("2_pwu4o")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_yr170")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_rr1ac")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 462.0
+offset_top = 712.0
+offset_right = -451.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.572716, 0.00316893, 0.882989, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Gordon et Gordon
+Mortelle Menace Trilogy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sélectionnez votre personnage"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 200
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainerBeauvoir" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainerBeauvoir"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_i640r")
+stretch_mode = 5
+
+[node name="BeauvoirButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainerBeauvoir"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Gordon"
+
+[node name="VBoxContainerBernard" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 40
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainerBernard"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("6_yr170")
+stretch_mode = 5
+
+[node name="BernardButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainerBernard"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Gordon"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainerBeauvoir/BeauvoirButton" to="." method="_on_beauvoir_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainerBernard/BernardButton" to="." method="_on_bernard_button_pressed"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5ee02orffybs"]
+
+[ext_resource type="PackedScene" uid="uid://cbg6ocq25s3nm" path="res://ennemy/states/ennemy_state.tscn" id="1_yud5w"]
+[ext_resource type="Script" path="res://ennemy/states/dead_state.gd" id="2_u5frj"]
+
+[node name="DeadState" instance=ExtResource("1_yud5w")]
+script = ExtResource("2_u5frj")

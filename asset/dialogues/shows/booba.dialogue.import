@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dk2j46l7lpylb"
+path="res://.godot/imported/booba.dialogue-486d8c5777bc924fa4f37989ddaa6139.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/shows/booba.dialogue"
+dest_files=["res://.godot/imported/booba.dialogue-486d8c5777bc924fa4f37989ddaa6139.tres"]
+
+[params]
+
+defaults=true

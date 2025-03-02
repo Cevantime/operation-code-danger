@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpyfnt0hleaii"]
+
+[ext_resource type="Texture2D" uid="uid://e4dwx03ym4wo" path="res://asset/shows/GORDON-sans-charte.jpg" id="1_drv0f"]
+[ext_resource type="Script" uid="uid://clxyjtm685wjj" path="res://show/poster_layer.gd" id="1_jd051"]
+[ext_resource type="Theme" uid="uid://yfnao01xbome" path="res://gordon_theme.tres" id="2_jd051"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mleqk"]
+font_size = 32
+
+[node name="PosterLayer" type="CanvasLayer"]
+script = ExtResource("1_jd051")
+title = "Test"
+text = "Coucou"
+
+[node name="PosterTextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -294.0
+offset_top = -279.0
+offset_right = 294.0
+offset_bottom = 478.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_drv0f")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -312.0
+offset_top = -273.0
+offset_bottom = 477.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("2_jd051")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(252, 105)
+layout_mode = 2
+text = "Test"
+label_settings = SubResource("LabelSettings_mleqk")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/bold_italics_font_size = 25
+theme_override_font_sizes/italics_font_size = 25
+theme_override_font_sizes/mono_font_size = 25
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "Coucou"
+fit_content = true
+
+[connection signal="meta_clicked" from="Panel/MarginContainer/VBoxContainer/RichTextLabel" to="." method="_on_rich_text_label_meta_clicked"]

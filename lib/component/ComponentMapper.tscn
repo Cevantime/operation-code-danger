@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://73dthsbggiev"]
+
+[ext_resource type="Script" path="res://lib/component/ComponentMapper.gd" id="1_qx3e4"]
+
+[node name="ComponentMapper" type="Node"]
+script = ExtResource("1_qx3e4")

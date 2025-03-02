@@ -1,0 +1,8 @@
+~ start
+do! play("bernard/ha ha ha")
+Bernard: Encore une victoire pour Bernard... ![next=1.5]
+Bernard: Heu... Pour Gordon ![next=1.5]
+Beauvoir: C'était encore une fois très spectaculaire, Gordon ! Et en même temps, sensible ![next=1.5]
+Bernard: Merci, Gordon, ça me touche beaucoup ![next=1.5]
+do Progress.write("second_wave_success", true)
+=> END

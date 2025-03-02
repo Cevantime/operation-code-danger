@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c8thqkop5lope"
+path="res://.godot/imported/question_gordon.dialogue-d25b981ba59124fc69f18f23a087193a.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/bernard/question_gordon.dialogue"
+dest_files=["res://.godot/imported/question_gordon.dialogue-d25b981ba59124fc69f18f23a087193a.tres"]
+
+[params]
+
+defaults=true

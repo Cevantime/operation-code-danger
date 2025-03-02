@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://minmn8bc0hjq"]
+
+[ext_resource type="PackedScene" uid="uid://cbg6ocq25s3nm" path="res://ennemy/states/ennemy_state.tscn" id="1_c1s3p"]
+[ext_resource type="Script" path="res://ennemy/states/attack/jump_velocity.gd" id="2_27bpf"]
+
+[node name="JumpVelocity" instance=ExtResource("1_c1s3p")]
+script = ExtResource("2_27bpf")
+JUMP_SPEED = 10.0

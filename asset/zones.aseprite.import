@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://lhc3ta5at11s"
+path="res://.godot/imported/zones.aseprite-6943fc099a322e95f5ab47c1a00ac8b5.res"
+
+[deps]
+
+source_file="res://asset/zones.aseprite"
+dest_files=["res://.godot/imported/zones.aseprite-6943fc099a322e95f5ab47c1a00ac8b5.res"]
+
+[params]
+

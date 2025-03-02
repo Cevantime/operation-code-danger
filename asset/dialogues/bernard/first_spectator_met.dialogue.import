@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://b0a3n4bqhi6mj"
+path="res://.godot/imported/first_spectator_met.dialogue-f2332606994c70294b843a4fa11aef4e.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/bernard/first_spectator_met.dialogue"
+dest_files=["res://.godot/imported/first_spectator_met.dialogue-f2332606994c70294b843a4fa11aef4e.tres"]
+
+[params]
+
+defaults=true

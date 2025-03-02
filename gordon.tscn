@@ -1,0 +1,295 @@
+[gd_scene load_steps=13 format=3 uid="uid://caibxkdjfslt2"]
+
+[ext_resource type="Script" uid="uid://irxnhc3alehf" path="res://gordon.gd" id="1_e5j2a"]
+[ext_resource type="PackedScene" uid="uid://d1x7fvunu6x28" path="res://emotion/emotion.tscn" id="4_4nxaa"]
+[ext_resource type="PackedScene" uid="uid://y725rceosfk3" path="res://hit_box.tscn" id="4_pl40c"]
+[ext_resource type="Texture2D" uid="uid://bvr437hkgi415" path="res://asset/target.png" id="4_tphsb"]
+[ext_resource type="PackedScene" uid="uid://bwvl4o4wwmsx4" path="res://lib/component/common/HealthComponent.tscn" id="5_6tref"]
+[ext_resource type="AudioStream" uid="uid://ddjljsvs1bfj5" path="res://asset/sounds/gun_shot.wav" id="6_gqr5d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ng84c"]
+radius = 5.09902
+
+[sub_resource type="Animation" id="Animation_x71xk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LegsSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LegsSprite2D:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TopSprite2D:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LegsSprite2D:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TopSprite2D:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4nxaa"]
+resource_name = "disappear"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LegsSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopSprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_y0kub"]
+resource_name = "hit"
+step = 0.08
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LegsSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0769231),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.890331, 0, 0.220648, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopSprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0769231),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.890331, 0, 0.220648, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hnas0"]
+resource_name = "spawn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LegsSprite2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -300), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopSprite2D:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -300), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_euwqo"]
+_data = {
+&"RESET": SubResource("Animation_x71xk"),
+&"disappear": SubResource("Animation_4nxaa"),
+&"hit": SubResource("Animation_y0kub"),
+&"spawn": SubResource("Animation_hnas0")
+}
+
+[node name="Gordon" type="CharacterBody2D" groups=["player"]]
+collision_layer = 2
+collision_mask = 1041
+script = ExtResource("1_e5j2a")
+
+[node name="Emotion" parent="." instance=ExtResource("4_4nxaa")]
+unique_name_in_owner = true
+
+[node name="LegsSprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+metadata/_aseprite_wizard_interface_config_ = {
+"output_section": true,
+"pending_changes": {},
+"slice_section": true
+}
+metadata/_aseprite_wizard_config_ = {
+"i_mode": -1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://asset",
+"o_name": "gordon_leg1",
+"only_visible": false,
+"player": "LegsAnimationPlayer",
+"slice": "",
+"source": "res://asset/gordon1_legs.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "852fea4bb789759755187d8dbc1bbf88"
+
+[node name="TopSprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"output_section": true,
+"pending_changes": {},
+"slice_section": false
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": false,
+"i_mode": -1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "res://asset/beauvoir",
+"o_name": "gordon_top1",
+"only_visible": false,
+"player": "TopAnimationPlayer",
+"slice": "",
+"source": "res://asset/gordon1_top.aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "9daec98f0cadacb43d5b7133ce0b53fe"
+
+[node name="ShootRayCast2D" type="RayCast2D" parent="TopSprite2D"]
+unique_name_in_owner = true
+position = Vector2(0, 28)
+target_position = Vector2(500, 0)
+collision_mask = 16
+
+[node name="TargetSprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 2
+z_as_relative = false
+texture = ExtResource("4_tphsb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 27)
+shape = SubResource("CircleShape2D_ng84c")
+
+[node name="HitBox" parent="." instance=ExtResource("4_pl40c")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("5_6tref")]
+unique_name_in_owner = true
+
+[node name="GlobalAnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_euwqo")
+}
+
+[node name="GunAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_gqr5d")
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="changed" from="HealthComponent" to="." method="_on_health_component_changed"]
+[connection signal="died" from="HealthComponent" to="." method="_on_health_component_died"]
+
+[editable path="HitBox"]

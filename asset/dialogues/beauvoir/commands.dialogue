@@ -1,0 +1,49 @@
+~ start
+do ui.display_go()
+do wait(2)
+Bernard: Quand le sympbole [img]res://asset/go.png[/img] apparaît, Gordon. Cela signifie « GO ». Autrement dit : « fonce droit devant, Gordon » ![next=3]
+do! gordon.play_emotion("love")
+Beauvoir: De l'américain... J'adore ça.[next=1]
+=> commands
+
+~ conclusion
+
+do gordon.controlled = true
+do ui.hide_go()
+do Progress.write("commands_done", true)
+=> END
+
+~ commands
+if use_joypad():
+	Bernard: Utilise ta manette pour de déplacer.[next=1]
+else:
+	Bernard: Utilise les touches de ton clavier pour te déplacer.[next=1]
+Bernard: -[img height=50]{{ get_action_icon("walk_right") }}[/img] pour aller à droite [img height=50]{{ get_action_icon("walk_left") }}[/img] pour aller à gauche
+	-[img height=50]{{ get_action_icon("walk_up") }}[/img] pour aller vers le haut [img height=50]{{ get_action_icon("walk_down") }}[/img] pour aller vers le bas[next=3]
+Bernard: Tu peux aussi t'accroupir, à l'aide de [img height=50]{{ get_action_icon("crouch") }}[/img][next=1.5]
+Bernard: Pour afficher le menu, appuie sur [img height=50]{{ get_action_icon("toggle_menu") }}[/img][next=1.5]
+do gordon.controlled = false
+do gordon.stop()
+do! play("bernard/gordon")
+Bernard: Tu as bien compris, ou bien tu veux que je te réexplique ?
+- Fastoche, Gordon.
+	do gordon.controlled = true
+	do! play("beauvoir/oh que oui")
+	Beauvoir: Tu expliques tellement bien, Gordon ! [next=1.5]
+	Bernard: C'est parce que j'ai moi-même dû me déplacer et m'accroupir souvent dans ma vie.[next=2]
+	Beauvoir: Ton expérience est un atout inestimable, Gordon.[next=1.5]
+	Bernard: La mienne est moins grande que la tienne, Gordon. [next=2]
+	do! play("beauvoir/hein")
+	do! gordon.play_emotion("question")
+	Beauvoir: ... Je ne vois pas le rapport, mais puisque tu le dis, Gordon ![next=2]
+	=> conclusion
+- Rien compris, Gordon.
+	do! play("beauvoir/hein")
+	do gordon.controlled = true
+	Beauvoir: Réexplique-moi ça calmement, Gordon.[next=1]
+	Bernard: Oh pardon, Gordon ! C'est mon tempérament fougueux qui reprend le dessus ![next=1.5]
+	Beauvoir: Je te reconnais bien là, Gordon ![next=1]
+	Bernard: Je brûle de te réexpliquer ça, Gordon.[next=1]
+	do! play("beauvoir/ha ha ha")
+	Beauvoir: C'est cet enthousiasme que j'aime, Gordon! [next=1]
+	=> commands

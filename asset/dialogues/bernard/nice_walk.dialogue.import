@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c1mogmnnakvxk"
+path="res://.godot/imported/nice_walk.dialogue-c540f71325129f274a38e38a3b712534.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/bernard/nice_walk.dialogue"
+dest_files=["res://.godot/imported/nice_walk.dialogue-c540f71325129f274a38e38a3b712534.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,127 @@
+[gd_scene load_steps=7 format=3 uid="uid://buvl6kiymcv64"]
+
+[ext_resource type="Script" uid="uid://ba6svt43jxag8" path="res://dialogue_balloon.gd" id="1_eltv0"]
+[ext_resource type="Theme" uid="uid://yfnao01xbome" path="res://gordon_theme.tres" id="2_0ktws"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="3_0kdn1"]
+[ext_resource type="Texture2D" uid="uid://dfre7vp3tqml5" path="res://asset/faces/beauvoir.png" id="3_0ktws"]
+[ext_resource type="Script" uid="uid://bnvp6nidtvjgv" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="4_cfu88"]
+[ext_resource type="Script" uid="uid://dtgqdgtnlbmmo" path="res://addons/ActionIcon/ActionIcon.gd" id="6_0kdn1"]
+
+[node name="DialogueBalloon" type="CanvasLayer"]
+layer = 100
+script = ExtResource("1_eltv0")
+next_action = &"next_dialogue"
+
+[node name="Balloon" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 226.0
+grow_horizontal = 2
+theme = ExtResource("2_0ktws")
+
+[node name="Panel" type="Panel" parent="Balloon"]
+clip_children = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Dialogue" type="MarginContainer" parent="Balloon/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Balloon/Panel/Dialogue"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Control" type="Control" parent="Balloon/Panel/Dialogue/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="TextureRect" type="TextureRect" parent="Balloon/Panel/Dialogue/HBoxContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_0ktws")
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/Panel/Dialogue/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Panel/Dialogue/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 2
+mouse_filter = 1
+bbcode_enabled = true
+text = "Character"
+fit_content = true
+scroll_active = false
+
+[node name="DialogueLabel" parent="Balloon/Panel/Dialogue/HBoxContainer/VBoxContainer" instance=ExtResource("3_0kdn1")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "Dialogue..."
+fit_content = false
+skip_pause_at_abbreviations = PackedStringArray("M.", "Mme.", "Dr", "etc", "ex")
+
+[node name="Responses" type="MarginContainer" parent="Balloon"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = 3.0
+offset_right = 506.0
+offset_bottom = 407.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon/Responses" node_paths=PackedStringArray("response_template")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 15
+script = ExtResource("4_cfu88")
+response_template = NodePath("ResponseExample")
+
+[node name="ResponseExample" type="Button" parent="Balloon/Responses/ResponsesMenu"]
+layout_mode = 2
+text = "Response example"
+
+[node name="ActionIcon" type="TextureRect" parent="Balloon"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 1166.0
+offset_top = 235.0
+offset_right = 1266.0
+offset_bottom = 275.0
+script = ExtResource("6_0kdn1")
+action_name = &"next_dialogue"
+favor_mouse = false
+
+[connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
+[connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

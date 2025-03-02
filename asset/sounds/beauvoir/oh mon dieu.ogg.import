@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b6rlbw3b3nklx"
+path="res://.godot/imported/oh mon dieu.ogg-a8c7be64944273c4e4b0438dc5f736a9.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/sounds/beauvoir/oh mon dieu.ogg"
+dest_files=["res://.godot/imported/oh mon dieu.ogg-a8c7be64944273c4e4b0438dc5f736a9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

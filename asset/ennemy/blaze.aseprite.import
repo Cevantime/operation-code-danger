@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://84nyledbrjt6"
+path="res://.godot/imported/blaze.aseprite-0a6098caa56a8b35e9a27f2be26794db.res"
+
+[deps]
+
+source_file="res://asset/ennemy/blaze.aseprite"
+dest_files=["res://.godot/imported/blaze.aseprite-0a6098caa56a8b35e9a27f2be26794db.res"]
+
+[params]
+

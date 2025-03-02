@@ -1,0 +1,5 @@
+~ start
+Beauvoir: Attention, Gordon. C'est à ton tour de sortir le grand jeu ![next=2]
+Bernard: Admire l'artiste à l'oeuvre, Gordon ![next=1.5]
+do Progress.write("first_wave_done", true)
+=> END

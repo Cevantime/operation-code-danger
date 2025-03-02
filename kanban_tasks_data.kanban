@@ -1,0 +1,261 @@
+{
+	"categories": [
+		{
+			"uuid": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"title": "Task",
+			"color": "70bafa"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "920e4759-65c3-4edd-a4db-967e2b52a5cb",
+			"title": "Todo",
+			"tasks": [
+				"23b1ff2d-8030-4649-9494-f10b6a107fcb"
+			]
+		},
+		{
+			"uuid": "999fb73d-2b4f-470d-8cfd-cb37b40af722",
+			"title": "Doing",
+			"tasks": [
+				"4375f039-2d85-4e63-a689-08d4ce5bda63"
+			]
+		},
+		{
+			"uuid": "7b364e69-9ca4-424d-a709-8a414879726c",
+			"title": "Done",
+			"tasks": [
+				"c0cbe01e-5670-4b98-8691-3056e034fbd8",
+				"96300791-78c5-4166-a253-1c64d0f296d7",
+				"a89a57cc-aa6d-4573-a5bb-d60f9f299082",
+				"48fbd801-76a2-424a-8013-fae939a4d4e2",
+				"78f9a89f-6f99-4e40-8ef4-03fffed372b3",
+				"b4407e5f-d996-432e-929e-78575a5f2320",
+				"6475dc93-e713-4505-a097-90162af422a1",
+				"9262b439-f15e-4dd0-ba3b-e7a68b0abf77",
+				"57f8aa53-d05a-442c-8bda-ca274fd3b4f6",
+				"d7cf4cc8-4e58-4e75-bd29-8ec8eb0dfea3",
+				"ae5599a9-e281-4e32-b7c9-9aa2b96c003f",
+				"9681652c-1059-4608-88c4-997d487f8377",
+				"a96fdfbe-5263-4584-91cf-ef35c18df42e",
+				"78301d32-858b-4a57-a4d3-85b0808fdaf7",
+				"daafac53-d444-4f10-8b0e-51bdc675997e",
+				"05c2e08f-655a-41f2-86f0-69d97f43f3ab",
+				"c613c0ac-b1c4-4243-aeab-6de1bc45d1d7",
+				"0d6210cf-de31-4cf4-9e85-3505451d9a46",
+				"9685a203-e752-444a-9460-19c2a1f0f360",
+				"e5df45f7-b6ed-4a07-853e-d4df85c5ed15",
+				"f9555585-ebf6-48a0-90ad-fac2a007adaa",
+				"9c84ec9c-e38b-4a00-bbce-dfdb59dcc5e9",
+				"5785ca3c-8f3e-4f6b-b3a7-9e3be529ccfd",
+				"bc57e0ab-7874-4396-9f50-9da8776b0835"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "c0cbe01e-5670-4b98-8691-3056e034fbd8",
+			"title": "Add capabiltiy to shoot ennemy",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": [
+				{
+					"details": "Add health to Ennemy",
+					"done": false
+				},
+				{
+					"details": "Add shooted animation",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "48fbd801-76a2-424a-8013-fae939a4d4e2",
+			"title": "Add ennemy an attack move",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "9681652c-1059-4608-88c4-997d487f8377",
+			"title": "Make Player die",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "a96fdfbe-5263-4584-91cf-ef35c18df42e",
+			"title": "Make player respawn",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "05c2e08f-655a-41f2-86f0-69d97f43f3ab",
+			"title": "Add Game over",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "9685a203-e752-444a-9460-19c2a1f0f360",
+			"title": "add multiple shot target for ennemy",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "e5df45f7-b6ed-4a07-853e-d4df85c5ed15",
+			"title": "Add jump attack for ennemy",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "5785ca3c-8f3e-4f6b-b3a7-9e3be529ccfd",
+			"title": "Add first dialogue",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "9c84ec9c-e38b-4a00-bbce-dfdb59dcc5e9",
+			"title": "Add alarm sound",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "ae5599a9-e281-4e32-b7c9-9aa2b96c003f",
+			"title": "Add better IA attack",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "bc57e0ab-7874-4396-9f50-9da8776b0835",
+			"title": "Add dialogue to first wave",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "daafac53-d444-4f10-8b0e-51bdc675997e",
+			"title": "Add Bouffon dialogue",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "0d6210cf-de31-4cf4-9e85-3505451d9a46",
+			"title": "Add Bouffon skin",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "23b1ff2d-8030-4649-9494-f10b6a107fcb",
+			"title": "After timeout give back attack token",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "f9555585-ebf6-48a0-90ad-fac2a007adaa",
+			"title": "Add look poster feature",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "6475dc93-e713-4505-a097-90162af422a1",
+			"title": "add bernard dialogue",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "a89a57cc-aa6d-4573-a5bb-d60f9f299082",
+			"title": "add sounds for dialogues and actions",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "c613c0ac-b1c4-4243-aeab-6de1bc45d1d7",
+			"title": "Régler pb du dialogue auto défilant quand gros texte",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "78301d32-858b-4a57-a4d3-85b0808fdaf7",
+			"title": "Add Gordon 2 at the end",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "96300791-78c5-4166-a253-1c64d0f296d7",
+			"title": "Add music",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "57f8aa53-d05a-442c-8bda-ca274fd3b4f6",
+			"title": "add credits",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "9262b439-f15e-4dd0-ba3b-e7a68b0abf77",
+			"title": "add character choice",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "78f9a89f-6f99-4e40-8ef4-03fffed372b3",
+			"title": "add end screen",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "d7cf4cc8-4e58-4e75-bd29-8ec8eb0dfea3",
+			"title": "add score counting",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "4375f039-2d85-4e63-a689-08d4ce5bda63",
+			"title": "add mobile joystick",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		},
+		{
+			"uuid": "b4407e5f-d996-432e-929e-78575a5f2320",
+			"title": "Add score to best score",
+			"description": "",
+			"category": "49d99aa6-b71b-40f9-9b19-62270ebf7d1d",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"920e4759-65c3-4edd-a4db-967e2b52a5cb"
+			],
+			[
+				"999fb73d-2b4f-470d-8cfd-cb37b40af722"
+			],
+			[
+				"7b364e69-9ca4-424d-a709-8a414879726c"
+			]
+		]
+	}
+}

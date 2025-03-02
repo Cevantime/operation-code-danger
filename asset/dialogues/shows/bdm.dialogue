@@ -1,0 +1,9 @@
+~ start
+do! play("beauvoir/gordon regarde")
+Beauvoir: Oh ! Mais qu'est-ce donc ? Serait-ce une conférence sur le son produits par les drosophiles ?
+Bernard: D'après la description, il s'agit plutôt d'une comédie à quatre personnages.
+Beauvoir: Une bonne tranche de rigolade en perspective, si je comprends bien, Gordon.
+do! play("bernard/oh que oui")
+Bernard: Ça m'en a tout l'air, Gordon !
+Beauvoir: Hâte de voir ça, Gordon.
+=> END

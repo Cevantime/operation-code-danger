@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cnmbb2ria7kvt"
+path="res://.godot/imported/poster.dialogue-f54ca48c2eb3857a8688a3d4ddded754.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/bernard/poster.dialogue"
+dest_files=["res://.godot/imported/poster.dialogue-f54ca48c2eb3857a8688a3d4ddded754.tres"]
+
+[params]
+
+defaults=true

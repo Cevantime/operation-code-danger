@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://0x184yfp6is4"]
+
+[ext_resource type="Script" path="res://lib/timers/random_range_time.gd" id="1_6ovwt"]
+
+[node name="RandomRangeTimer" type="Timer"]
+autostart = true
+script = ExtResource("1_6ovwt")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bg17quadxmfec"
+path="res://.godot/imported/gordon2_export.aseprite-fecf7fa7f7f0fd1f63b895750d949ee9.res"
+
+[deps]
+
+source_file="res://asset/gordon2_export.aseprite"
+dest_files=["res://.godot/imported/gordon2_export.aseprite-fecf7fa7f7f0fd1f63b895750d949ee9.res"]
+
+[params]
+

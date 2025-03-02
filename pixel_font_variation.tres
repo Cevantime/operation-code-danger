@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://dtwjvytea8jcq"]
+
+[ext_resource type="FontFile" uid="uid://cf7plvcrrsii4" path="res://asset/font/Kenney High.ttf" id="1_grlmf"]
+
+[resource]
+base_font = ExtResource("1_grlmf")
+variation_transform = Transform2D(1, 0.3, 0, 1, 0, 0)
+spacing_bottom = -4

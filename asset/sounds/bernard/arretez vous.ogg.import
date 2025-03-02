@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://sl8cpmea8t7d"
+path="res://.godot/imported/arretez vous.ogg-2bda06e53fac91f7116d76ea4656e07c.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/sounds/bernard/arretez vous.ogg"
+dest_files=["res://.godot/imported/arretez vous.ogg-2bda06e53fac91f7116d76ea4656e07c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

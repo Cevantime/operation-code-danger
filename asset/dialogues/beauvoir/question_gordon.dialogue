@@ -1,0 +1,28 @@
+~ start
+do gordon.controlled = false
+do gordon.stop()
+do! play("beauvoir/gordon")
+Beauvoir: Dis-moi, Gordon... une question me turlupine.
+do! play("bernard/ha ha ha")
+Bernard: J'aime beaucoup quand tu dis le mot « turlupine », Gordon.
+Beauvoir: Ah ? Eh bien... « turlupine », Gordon. 
+do! play("bernard/ha ha ha")
+Bernard: Oh merci, c'était génial, Gordon !
+Beauvoir: Il n'y a pas de quoi, Gordon.
+Bernard: Qu'est-ce qui te turlupine, Gordon ?
+Beauvoir: ... Redis-ça pour voir, Gordon ?
+Bernard: Mais bien sûr, Gordon: « qu'est-ce qui te turlupine, Gordon ? »
+do gordon.play_emotion("love")
+do! play("beauvoir/ha ha ha")
+Beauvoir: Oh mon Dieu, Gordon ! Je viens de m'apercevoir que j'aime beaucoup quand tu dis ce mot, moi aussi !
+Bernard: Incroyable, Gordon. Nous avons tant en commun, Gordon !
+Beauvoir: Rien de plus vrai, Gordon.
+Bernard: Alors, dis-moi, Gordon : qu'est-ce qui te turlupine ?
+Beauvoir: J'y viens, Gordon. Nous sommes d'accord que ceci est un jeu vidéo promotionnel, Gordon ?
+do! play("bernard/oh que oui")
+Bernard: Oh que oui ! Cela ne fait aucun doute, Gordon.
+Beauvoir: Mais une question subsiste, Gordon : qu'est-ce que ce jeu vidéo promotionnel promeut-il, Gordon ?
+Bernard: Tu vas bientôt le découvrir, Gordon. Avance encore un peu !
+do gordon.controlled = true
+do Progress.write("question_gordon", true)
+=> END

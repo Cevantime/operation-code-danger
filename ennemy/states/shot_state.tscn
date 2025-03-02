@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8kqn8dnrcu4a"]
+
+[ext_resource type="PackedScene" uid="uid://cbg6ocq25s3nm" path="res://ennemy/states/ennemy_state.tscn" id="1_v1mkv"]
+[ext_resource type="Script" path="res://ennemy/states/shot_state.gd" id="2_vg4pu"]
+
+[node name="ShotState" instance=ExtResource("1_v1mkv")]
+script = ExtResource("2_vg4pu")

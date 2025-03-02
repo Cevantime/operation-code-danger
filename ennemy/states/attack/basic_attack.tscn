@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://b65yxohqneld2"]
+
+[ext_resource type="PackedScene" uid="uid://cbg6ocq25s3nm" path="res://ennemy/states/ennemy_state.tscn" id="1_3i8c3"]
+[ext_resource type="Script" path="res://ennemy/states/attack/basic_attack.gd" id="2_px8aa"]
+
+[node name="BasicAttack" instance=ExtResource("1_3i8c3")]
+script = ExtResource("2_px8aa")
+animation_name = ""

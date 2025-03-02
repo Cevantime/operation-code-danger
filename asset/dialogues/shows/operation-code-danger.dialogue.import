@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://cj3smmqalce2j"
+path="res://.godot/imported/operation-code-danger.dialogue-8f5a03df4fad7420e3f8d93f31149546.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/shows/operation-code-danger.dialogue"
+dest_files=["res://.godot/imported/operation-code-danger.dialogue-8f5a03df4fad7420e3f8d93f31149546.tres"]
+
+[params]
+
+defaults=true

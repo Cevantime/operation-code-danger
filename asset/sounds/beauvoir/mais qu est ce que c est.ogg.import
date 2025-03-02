@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ukb6p1xfvvfm"
+path="res://.godot/imported/mais qu est ce que c est.ogg-e13108c20ff70c48a2a1b8917e4f9953.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/sounds/beauvoir/mais qu est ce que c est.ogg"
+dest_files=["res://.godot/imported/mais qu est ce que c est.ogg-e13108c20ff70c48a2a1b8917e4f9953.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

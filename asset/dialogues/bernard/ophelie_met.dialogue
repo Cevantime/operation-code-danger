@@ -1,0 +1,28 @@
+~ this_is_a_node_title
+do gordon.controlled = false
+do gordon.stop()
+do ennemies_walk_toward_player()
+do! gordon.play_emotion("surprised")
+Beauvoir: ![next=2]
+do! play("beauvoir/halte la")
+do gordon.face(ophelie)
+do ennemies_stop()
+do wait(1)
+do! gordon.play_emotion("love")
+do! play("beauvoir/gordon regarde")
+Beauvoir: Oh mon Dieu, Gordon ! D'où cette sort cette sublime créature ?
+Bernard: Attention, Gordon, ce n'est pas n'importe quelle sublime créature...
+Bernard: C'est la CO-DIRECTRICE du Bouffon Théâtre !!
+do! play("beauvoir/oh mon dieu")
+Beauvoir: Oh ! nom de Zeus !
+Bernard: C'est le moment de briller, Gordon.
+Beauvoir: Oh que oui !
+Bernard: [font size=30](Fais attention quand-même car j'ai ouï dire que c'était une dure à cuire !)[/font]
+do gordon.controlled = true
+do ennemies_idle()
+do wait_for_death(ophelie)
+do! play("bernard/ha ha ha")
+Bernard: Et voilà une bonne chose de faite ! Je suis sûr que tu lui as fait forte impression, Gordon ![next=2.5]
+Beauvoir: Je l'espère aussi, Gordon ![next=1.5]
+do Progress.write("ophelie_met", true)
+=> END

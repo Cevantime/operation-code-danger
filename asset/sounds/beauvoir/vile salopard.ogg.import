@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://wgexjyt2yc7i"
+path="res://.godot/imported/vile salopard.ogg-74e85d9ca5f764c207b61d619306dc9d.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/sounds/beauvoir/vile salopard.ogg"
+dest_files=["res://.godot/imported/vile salopard.ogg-74e85d9ca5f764c207b61d619306dc9d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

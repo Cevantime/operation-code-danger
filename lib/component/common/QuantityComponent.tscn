@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlj1tfyf08noy"]
+
+[ext_resource type="Script" path="res://src/component/common/QuantityComponent.gd" id="1_4ye8j"]
+
+[node name="QuantityComponent" type="Node"]
+script = ExtResource("1_4ye8j")

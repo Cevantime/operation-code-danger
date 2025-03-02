@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://5xyipq7a40x8"
+path="res://.godot/imported/ha ha ha.ogg-c6979e106fc49160692aa683eec26f74.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/sounds/bernard/ha ha ha.ogg"
+dest_files=["res://.godot/imported/ha ha ha.ogg-c6979e106fc49160692aa683eec26f74.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

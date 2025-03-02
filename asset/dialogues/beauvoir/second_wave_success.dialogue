@@ -1,0 +1,8 @@
+~ start
+do! play("bernard/ha ha ha")
+Bernard: Whouahou ! C'était moins une, Gordon ![next=1.5]
+Beauvoir: Ces spectateurs sont coriaces ![next=1.5]
+Bernard: C'est normal, ce sont nos spectateurs ![next=1.5]
+Beauvoir: Nom d'un petit bonhomme, tu as raison, Gordon.[next=1.5]
+do Progress.write("second_wave_success", true)
+=> END

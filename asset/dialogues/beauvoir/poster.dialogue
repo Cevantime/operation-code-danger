@@ -1,0 +1,14 @@
+~ start
+do gordon.controlled = false
+do gordon.stop()
+do! play("beauvoir/oh mon dieu")
+Beauvoir: Nom d'une pipe, Gordon !
+do! play("bernard/gordon")
+Bernard: Qu'y a-t-il, Gordon ?
+do! play("beauvoir/gordon regarde")
+Beauvoir: J'aperçois des posters publicitaires !
+Bernard: Ce sont des affiches de spectacle ! Tu approches du théâtre, Gordon !
+Bernard: Approche-toi des affiches et appuie sur [img]{{ get_action_icon("interact") }}[/img] pour en apercevoir le contenu !
+do gordon.controlled = true
+do Progress.write(Progress.POSTER_DONE, true)
+=> END

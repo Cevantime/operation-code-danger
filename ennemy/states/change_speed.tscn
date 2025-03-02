@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsqoc63jmo5ay"]
+
+[ext_resource type="PackedScene" uid="uid://cbg6ocq25s3nm" path="res://ennemy/states/ennemy_state.tscn" id="1_2osci"]
+[ext_resource type="Script" path="res://ennemy/states/change_speed.gd" id="2_g7o6s"]
+
+[node name="ChangeSpeed" instance=ExtResource("1_2osci")]
+script = ExtResource("2_g7o6s")
+speed = 1.0

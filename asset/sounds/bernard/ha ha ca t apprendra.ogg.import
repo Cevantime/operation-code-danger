@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cw68cs6tntv4q"
+path="res://.godot/imported/ha ha ca t apprendra.ogg-25d17540d0840e5f5e2029b8a3ad481f.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/sounds/bernard/ha ha ca t apprendra.ogg"
+dest_files=["res://.godot/imported/ha ha ca t apprendra.ogg-25d17540d0840e5f5e2029b8a3ad481f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

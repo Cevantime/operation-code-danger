@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8m621a4gnet1"]
+
+[ext_resource type="Script" path="res://src/component/common/NameComponent.gd" id="1_q8tah"]
+
+[node name="NameComponent" type="Node"]
+script = ExtResource("1_q8tah")

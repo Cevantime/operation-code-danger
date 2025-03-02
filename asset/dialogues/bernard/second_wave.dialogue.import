@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://2yb77gugic8v"
+path="res://.godot/imported/second_wave.dialogue-f5d939a4af503eaec9edbdb594109074.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/bernard/second_wave.dialogue"
+dest_files=["res://.godot/imported/second_wave.dialogue-f5d939a4af503eaec9edbdb594109074.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://cr2ywbjdqgyj0"]
+
+[ext_resource type="Script" uid="uid://c8mdc6od2gbv3" path="res://ui.gd" id="1_27fn8"]
+[ext_resource type="Theme" uid="uid://yfnao01xbome" path="res://gordon_theme.tres" id="1_m6e0p"]
+[ext_resource type="PackedScene" uid="uid://naq3n1o2dvt7" path="res://health_progress_bar.tscn" id="2_27fn8"]
+[ext_resource type="PackedScene" uid="uid://b5p5fufvyn7x5" path="res://go_label.tscn" id="4_nltto"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nltto"]
+content_margin_bottom = 6.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibotj"]
+content_margin_top = 23.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="UI" type="CanvasLayer"]
+visible = false
+script = ExtResource("1_27fn8")
+
+[node name="UpPanel" type="PanelContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 92.0
+grow_horizontal = 2
+theme = ExtResource("1_m6e0p")
+
+[node name="MarginContainer" type="MarginContainer" parent="UpPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="UpHBoxContainer" type="HBoxContainer" parent="UpPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="LifeScoreHBoxContainer" type="HBoxContainer" parent="UpPanel/MarginContainer/UpHBoxContainer"]
+layout_mode = 2
+
+[node name="ScoreHealthVBoxContainer" type="VBoxContainer" parent="UpPanel/MarginContainer/UpHBoxContainer/LifeScoreHBoxContainer"]
+layout_mode = 2
+
+[node name="HeartScoreHBoxContainer" type="HBoxContainer" parent="UpPanel/MarginContainer/UpHBoxContainer/LifeScoreHBoxContainer/ScoreHealthVBoxContainer"]
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="UpPanel/MarginContainer/UpHBoxContainer/LifeScoreHBoxContainer/ScoreHealthVBoxContainer/HeartScoreHBoxContainer"]
+layout_mode = 2
+text = "Score - "
+
+[node name="ScoreValueLabel" type="Label" parent="UpPanel/MarginContainer/UpHBoxContainer/LifeScoreHBoxContainer/ScoreHealthVBoxContainer/HeartScoreHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "053210"
+
+[node name="HealthProgressBar" parent="UpPanel/MarginContainer/UpHBoxContainer/LifeScoreHBoxContainer/ScoreHealthVBoxContainer" instance=ExtResource("2_27fn8")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="LifeMultiplicator" type="HBoxContainer" parent="UpPanel/MarginContainer/UpHBoxContainer/LifeScoreHBoxContainer"]
+layout_mode = 2
+
+[node name="MulLabel" type="Label" parent="UpPanel/MarginContainer/UpHBoxContainer/LifeScoreHBoxContainer/LifeMultiplicator"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxFlat_nltto")
+text = "❌"
+
+[node name="LivesLabel" type="Label" parent="UpPanel/MarginContainer/UpHBoxContainer/LifeScoreHBoxContainer/LifeMultiplicator"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_ibotj")
+text = "2"
+vertical_alignment = 2
+
+[node name="GoLabel" parent="." instance=ExtResource("4_nltto")]
+unique_name_in_owner = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -188.0
+offset_top = 225.0
+offset_right = -28.0
+offset_bottom = 385.0
+grow_horizontal = 0

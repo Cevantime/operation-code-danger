@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj7hl0b8jpypo"]
+
+[ext_resource type="PackedScene" uid="uid://cbg6ocq25s3nm" path="res://ennemy/states/ennemy_state.tscn" id="1_csxx6"]
+[ext_resource type="Script" path="res://ennemy/states/attack/one_time_attack.gd" id="2_ficwo"]
+
+[node name="OneTimeAttack" instance=ExtResource("1_csxx6")]
+script = ExtResource("2_ficwo")
+animation_name = ""

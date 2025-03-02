@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://27uxvp6yyxdb"
+path="res://.godot/imported/bbchevrotine.dialogue-977595285a796fba83fb8b3ab60b786c.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/shows/bbchevrotine.dialogue"
+dest_files=["res://.godot/imported/bbchevrotine.dialogue-977595285a796fba83fb8b3ab60b786c.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,54 @@
+~ start
+do gordon.controlled = false
+do gordon.stop()
+do ennemy.go_left()
+do! play("beauvoir/hein")
+do! gordon.play_emotion("surprised")
+Beauvoir: !!! [next=1]
+do! play("beauvoir/halte la")
+do gordon.face(ennemy)
+do ennemy.stop()
+do wait(1)
+Beauvoir: Cré nom d'un chien, Gordon ! Nous ne sommes pas seul dans ce jeu !
+Bernard: Il semblerait que non, Gordon.
+Beauvoir: Mais qui cela peut-il bien être ?
+Bernard: Je pense que c'est un... Non, impossible.
+Beauvoir: Ne me fais pas languir plus longtemps, Gordon !
+Bernard: Eh bien, j'avais pensé au départ qu'il s'agissait d'un personnage du jeu vidéo Streets of Rage...
+Bernard: Mais je m'aperçois que ça n'a pas de sens.
+do! play("bernard/gordon")
+Bernard: Gordon, écoute-moi bien !
+do! play("beauvoir/oui gordon")
+Beauvoir: Je t'écoute, Gordon !
+Bernard: Gordon, ce que tu as en face de toi n'est rien d'autre qu'un... SPECTATEUR !!
+do! play("beauvoir/c est affreux")
+Beauvoir: Un [shake]spectateur[/shake] ? ... Mais il est incroyablement musclé !!
+Beauvoir: Nom d'un chien, Gordon ! Est-ce que tous nos spectateurs sont aussi beaux et forts ?
+do! play("bernard/oh que oui")
+Bernard: Mais oui, Gordon ! Car nos spectateurs sont les meilleurs spectateurs du monde !
+Beauvoir: Bon sang, Gordon, tu as raison, c'est logique !
+do! gordon.play_emotion("love")
+do wait(0.5)
+Beauvoir: J'ai hâte de lui en mettre plein les yeux, Gordon !
+Bernard: Moi aussi, Gordon ! Mais attention, car nos spectateurs aussi aiment bien la bagarre. 
+do play("beauvoir/ha ha ha")
+Beauvoir: Je les reconnais bien là, Gordon !
+Bernard: Place-toi bien en face de lui puis utilise [img]{{ get_action_icon("shoot") }}[/img] pour le toucher en plein coeur, Gordon !
+do gordon.controlled = true
+do wait_for_death(ennemy)
+do gordon.controlled = false
+do gordon.stop()
+Bernard: Bingo ! Encore un spectateur conquis par ta prestation, Gordon !
+do gordon.play_emotion("happy")
+Beauvoir: Par [wave]notre[/wave] prestation, Gordon !
+Bernard: Tu es trop modeste, Gordon !
+Beauvoir: Mais non ! [next=0.5]
+Bernard: Mais si ! [next=0.5]
+Beauvoir: Bon, si tu insistes, Gordon.
+Bernard: Mais attention tout de même, Gordon... car tous nos spectateurs ne resteront pas béats devant ton charisme... Certains se jetteront carrément sur toi !
+Beauvoir: C'est tout naturel.[next=0.5]
+Bernard: Comment leur en vouloir ?[next=0.5]
+Beauvoir: Ne jamais sous-estimer un spectateur. C'est noté, Gordon.
+do gordon.controlled = true
+do Progress.write("first_spectator_met", true)
+=> END

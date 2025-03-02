@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://pkap13d7mrqx"]
+
+[ext_resource type="PackedScene" uid="uid://dq84yffvpx7ka" path="res://lib/spawners/basic_spawner.tscn" id="1_hwyf2"]
+[ext_resource type="Script" path="res://zone/zone_spawner.gd" id="2_gadq4"]
+
+[node name="ZoneSpawner" instance=ExtResource("1_hwyf2")]
+script = ExtResource("2_gadq4")

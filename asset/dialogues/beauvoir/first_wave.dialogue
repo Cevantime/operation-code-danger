@@ -1,0 +1,7 @@
+~ start
+Bernard: Attention, ils sont trois, cette fois-ci. Et ils ont l'air d'avoir envie d'en découdre. [next=2]
+Beauvoir: Comment leur en vouloir ? [next=1.5]
+Bernard: Donne-leur tout ce que tu as, Gordon ![next=1.5]
+Beauvoir: Oh que oui ![next=1.5]
+do Progress.write("first_wave_done", true)
+=> END

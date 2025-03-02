@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cof8jr21fgdrx"
+path="res://.godot/imported/et pour l injustice.ogg-12649766d8e9054c364246e3935625d9.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/sounds/beauvoir/et pour l injustice.ogg"
+dest_files=["res://.godot/imported/et pour l injustice.ogg-12649766d8e9054c364246e3935625d9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

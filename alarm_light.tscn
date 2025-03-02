@@ -1,0 +1,78 @@
+[gd_scene load_steps=7 format=3 uid="uid://kkqsbncfdd1v"]
+
+[ext_resource type="Texture2D" uid="uid://c3ctudpfbm2bi" path="res://asset/light.png" id="1_qv6s8"]
+[ext_resource type="AudioStream" uid="uid://bqhdv874c736u" path="res://asset/sounds/alarm.wav" id="2_i8mfb"]
+[ext_resource type="Script" uid="uid://e28lpic3m5yv" path="res://alarm_light.gd" id="2_xiwmn"]
+
+[sub_resource type="Animation" id="Animation_xiwmn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_i8mfb"]
+resource_name = "alternate"
+length = 0.7
+loop_mode = 1
+step = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 0.0, 1.0]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wd86l"]
+_data = {
+&"RESET": SubResource("Animation_xiwmn"),
+&"alternate": SubResource("Animation_i8mfb")
+}
+
+[node name="AlarmLight" type="PointLight2D" groups=["alarm_lights"]]
+energy = 0.0
+shadow_enabled = true
+texture = ExtResource("1_qv6s8")
+script = ExtResource("2_xiwmn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_wd86l")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_i8mfb")
+volume_db = -14.26

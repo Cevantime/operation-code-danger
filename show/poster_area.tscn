@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkmtfmg41mm7o"]
+
+[ext_resource type="Script" path="res://show/poster_area.gd" id="1_ak4dw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ttoc6"]
+radius = 11.0
+height = 48.0
+
+[node name="PosterArea" type="Area2D"]
+collision_layer = 4096
+collision_mask = 2
+script = ExtResource("1_ak4dw")
+
+[node name="PosterSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 102)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ttoc6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

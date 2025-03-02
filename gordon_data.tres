@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="GordonData" load_steps=2 format=3 uid="uid://bcqc7jcgqa3m"]
+
+[ext_resource type="Script" path="res://gordon_data.gd" id="1_qdpuv"]
+
+[resource]
+script = ExtResource("1_qdpuv")
+name = 0

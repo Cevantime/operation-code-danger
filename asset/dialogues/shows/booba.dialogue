@@ -1,0 +1,9 @@
+~ start
+do! play("beauvoir/gordon regarde")
+Beauvoir: J'aime beaucoup cette affiche, Gordon.
+Beauvoir: « De la Fontaine à Booba ».
+Bernard: Qu'est-ce que ça raconte, Gordon ?
+Beauvoir: Apparemment, Booba possède une fontaine et cette pièce parle de ça, Gordon.
+Bernard: Aaah ! Et qui est l'autre personnage sur l'affiche, Gordon ? Celui avec les longs cheveux bouclés ?
+Beauvoir: Je ne sais pas mais j'adore son style, Gordon !
+=> END

@@ -1,0 +1,6 @@
+~ start
+do! play("beauvoir/attention gordon")
+Beauvoir: Et c'est parti pour la deuxième vague, Gordon !  Ma préférée ![next=1.5]
+Bernard: Ils vont voir ce qu'ils vont voir ! [next=1]
+do Progress.write("second_wave_done", true)
+=> END

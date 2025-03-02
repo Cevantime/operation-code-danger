@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://3jthvw35jl5u"]
+
+[ext_resource type="Script" path="res://side_scrolling_camera.gd" id="1_6acjc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6acjc"]
+size = Vector2(24, 260)
+
+[node name="Camera2D" type="Camera2D"]
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
+script = ExtResource("1_6acjc")
+
+[node name="WestWall" type="CharacterBody2D" parent="."]
+position = Vector2(-173, 1)
+collision_layer = 1024
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WestWall"]
+shape = SubResource("RectangleShape2D_6acjc")
+
+[node name="EastWall" type="CharacterBody2D" parent="."]
+position = Vector2(173, 2)
+collision_layer = 1024
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EastWall"]
+shape = SubResource("RectangleShape2D_6acjc")

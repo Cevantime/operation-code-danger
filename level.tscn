@@ -1,0 +1,631 @@
+[gd_scene load_steps=62 format=3 uid="uid://bvxo0e4w6shgt"]
+
+[ext_resource type="Script" uid="uid://bhfwhn81y66an" path="res://level.gd" id="1_km5ld"]
+[ext_resource type="Texture2D" uid="uid://cepcic1w4xc2f" path="res://asset/stage/stage1_background.png" id="1_vonw3"]
+[ext_resource type="Script" uid="uid://b4u2pbqi1554v" path="res://gordon_data.gd" id="2_4c15r"]
+[ext_resource type="Texture2D" uid="uid://cajesea216f07" path="res://asset/stage/stage1_foreground.png" id="2_oi3di"]
+[ext_resource type="PackedScene" uid="uid://caibxkdjfslt2" path="res://gordon.tscn" id="3_oi3di"]
+[ext_resource type="PackedScene" uid="uid://3jthvw35jl5u" path="res://side_scrolling_camera.tscn" id="4_0b4ue"]
+[ext_resource type="PackedScene" uid="uid://dq84yffvpx7ka" path="res://lib/spawners/basic_spawner.tscn" id="5_i2t4f"]
+[ext_resource type="PackedScene" uid="uid://cr2ywbjdqgyj0" path="res://ui.tscn" id="6_1ainy"]
+[ext_resource type="PackedScene" uid="uid://cj0bp3rn5k1dm" path="res://ennemy/axel.tscn" id="7_8cye3"]
+[ext_resource type="PackedScene" uid="uid://pkap13d7mrqx" path="res://zone/zone_spawner.tscn" id="7_fedht"]
+[ext_resource type="PackedScene" uid="uid://cq57xsi102fi5" path="res://ennemy/adam.tscn" id="8_4c15r"]
+[ext_resource type="PackedScene" uid="uid://c5768el23f7md" path="res://ennemy/blaze.tscn" id="9_4c15r"]
+[ext_resource type="PackedScene" uid="uid://cguo6ea88iosr" path="res://lib/menu/menu.tscn" id="9_i2t4f"]
+[ext_resource type="PackedScene" uid="uid://dyukcgibq6uns" path="res://zone/trigger_zone.tscn" id="10_2orkt"]
+[ext_resource type="PackedScene" uid="uid://cuegxp4yck6go" path="res://attack_manager.tscn" id="10_8b0r0"]
+[ext_resource type="Theme" uid="uid://yfnao01xbome" path="res://gordon_theme.tres" id="10_8cye3"]
+[ext_resource type="PackedScene" uid="uid://dkmtfmg41mm7o" path="res://show/poster_area.tscn" id="12_42xju"]
+[ext_resource type="PackedScene" uid="uid://bccwtw0suhnkl" path="res://bouffon_part.tscn" id="12_ait7k"]
+[ext_resource type="PackedScene" uid="uid://j43jkvmlenmu" path="res://lib/fps_label/FPSLabel.tscn" id="12_h6smj"]
+[ext_resource type="Resource" uid="uid://cj3smmqalce2j" path="res://asset/dialogues/shows/operation-code-danger.dialogue" id="14_hvubb"]
+[ext_resource type="Script" uid="uid://cpdfqbm5ysfpj" path="res://show/show.gd" id="14_y3bce"]
+[ext_resource type="Texture2D" uid="uid://cj6vc0erl5wby" path="res://asset/shows/operation-code-danger.png" id="15_u3yai"]
+[ext_resource type="PackedScene" uid="uid://kkqsbncfdd1v" path="res://alarm_light.tscn" id="17_fedht"]
+[ext_resource type="Texture2D" uid="uid://d4l6uxq4osy3a" path="res://asset/shows/BDM.jpg" id="18_r5f7e"]
+[ext_resource type="Texture2D" uid="uid://e4dwx03ym4wo" path="res://asset/shows/GORDON-sans-charte.jpg" id="18_v7sqt"]
+[ext_resource type="Texture2D" uid="uid://d2qx4tgqnwrfl" path="res://asset/shows/boobal.png" id="18_yjxuc"]
+[ext_resource type="Texture2D" uid="uid://cedak6unm08cr" path="res://asset/shows/booba_small.png" id="19_hvubb"]
+[ext_resource type="Resource" uid="uid://dtowofmrotf7a" path="res://asset/dialogues/shows/bdm.dialogue" id="19_wp8k7"]
+[ext_resource type="Texture2D" uid="uid://cyakeggr5258a" path="res://asset/shows/BDM_small.jpg" id="20_na3no"]
+[ext_resource type="Resource" uid="uid://dk2j46l7lpylb" path="res://asset/dialogues/shows/booba.dialogue" id="21_mleqk"]
+[ext_resource type="Script" uid="uid://236ca8c8cavm" path="res://addons/virtual_joystick/virtual_joystick_instantiator.gd" id="22_uuqa8"]
+[ext_resource type="PackedScene" uid="uid://f20gtamp5q0q" path="res://action_button.tscn" id="23_samc1"]
+[ext_resource type="Texture2D" uid="uid://ct40ohsm8wri" path="res://addons/ActionIcon/Keyboard/E.png" id="24_oaehd"]
+[ext_resource type="PackedScene" uid="uid://b0ivlcf6mi1hm" path="res://public.tscn" id="24_ut2i6"]
+[ext_resource type="Texture2D" uid="uid://xgnb2rolpvtk" path="res://asset/stage/curtain.png" id="25_0mnfp"]
+[ext_resource type="Texture2D" uid="uid://islgfxnpry2w" path="res://asset/stage/shadow.png" id="25_qw2y7"]
+[ext_resource type="Texture2D" uid="uid://co1tywrfbkny8" path="res://asset/big_light.png" id="26_qw2y7"]
+[ext_resource type="Script" uid="uid://dtgqdgtnlbmmo" path="res://addons/ActionIcon/ActionIcon.gd" id="27_sl4om"]
+[ext_resource type="PackedScene" uid="uid://bpyfnt0hleaii" path="res://show/poster_layer.tscn" id="28_6btg4"]
+[ext_resource type="Texture2D" uid="uid://d4a8dedrkvdx0" path="res://addons/ActionIcon/Keyboard/Escape.png" id="36_4wtct"]
+[ext_resource type="Texture2D" uid="uid://df84ndbfga52l" path="res://addons/ActionIcon/Keyboard/Space.png" id="37_dlbli"]
+[ext_resource type="AudioStream" uid="uid://dg1okjxv1e2bk" path="res://asset/music/walk.ogg" id="37_samc1"]
+[ext_resource type="AudioStream" uid="uid://c06yt11mmcrw" path="res://asset/music/battle.ogg" id="38_oaehd"]
+[ext_resource type="AudioStream" uid="uid://drjwxoyg4oxeo" path="res://asset/sounds/applause/applause_1.ogg" id="39_r5f7e"]
+[ext_resource type="AudioStream" uid="uid://bt6y3xpge20a3" path="res://asset/sounds/applause/applause_2.ogg" id="40_wp8k7"]
+[ext_resource type="AudioStream" uid="uid://ctk0rexr6owm2" path="res://asset/sounds/applause/applause_3.ogg" id="41_na3no"]
+[ext_resource type="AudioStream" uid="uid://tlj84sh7dht0" path="res://asset/sounds/applause/applause_4.ogg" id="42_07udg"]
+[ext_resource type="AudioStream" uid="uid://sfeeim3nycmn" path="res://asset/sounds/applause/applause_5.ogg" id="43_4wtct"]
+[ext_resource type="AudioStream" uid="uid://bvbekfp3pf03v" path="res://asset/sounds/applause/applause_6.ogg" id="44_dlbli"]
+[ext_resource type="AudioStream" uid="uid://dwir2v3q5lk5s" path="res://asset/sounds/applause/applause_7.ogg" id="45_2hox4"]
+[ext_resource type="AudioStream" uid="uid://ded6y2dsbefa1" path="res://asset/sounds/applause/applause_8.ogg" id="46_84hvi"]
+
+[sub_resource type="Resource" id="Resource_4c15r"]
+script = ExtResource("2_4c15r")
+name = null
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0b4ue"]
+size = Vector2(3244.75, 166)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fedht"]
+cull_mode = 2
+polygon = PackedVector2Array(-2, -18, -2, 5, -5, 3, -13, 3, -1, 21, 16, 21, 15, -18)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4c15r"]
+polygon = PackedVector2Array(-2, 0, -2, -21, 16, -21, 16, 3, 22, 3, 16, 8, -2, 8, -13, 0)
+
+[sub_resource type="Resource" id="Resource_07udg"]
+script = ExtResource("14_y3bce")
+small_poster = ExtResource("15_u3yai")
+big_poster = ExtResource("18_v7sqt")
+title = "Mortelle Menace Trilogy"
+dialogue = ExtResource("14_hvubb")
+presentation_text = "La nouvelle aventure de Gordon et Gordon"
+metadata/_custom_type_script = "uid://cpdfqbm5ysfpj"
+
+[sub_resource type="Resource" id="Resource_4wtct"]
+script = ExtResource("14_y3bce")
+small_poster = ExtResource("20_na3no")
+big_poster = ExtResource("18_r5f7e")
+title = "Le Bruit des Mouches"
+dialogue = ExtResource("19_wp8k7")
+presentation_text = "Trois colocataires, Oscar, Thomas et Marc, découvrent un cadavre démantelé dans leur baignoire ! Et comble de l'horreur : c'est le trou noir, aucun souvenir ni explication. 
+[url=https://www.billetreduc.com/370367/evt.htm]Réservez[/url] dès maintenant vos places sur le billetreduc."
+metadata/_custom_type_script = "uid://cpdfqbm5ysfpj"
+
+[sub_resource type="Resource" id="Resource_dlbli"]
+script = ExtResource("14_y3bce")
+small_poster = ExtResource("19_hvubb")
+big_poster = ExtResource("18_yjxuc")
+title = "De La Fontaine à Booba"
+dialogue = ExtResource("21_mleqk")
+presentation_text = "Le spectacle se transforme en joute verbale où chacun défend sa vision à travers les textes. Est-ce que La Fontaine a du flow ? Peut-on rapper une fable ? Le rap est-il une forme de poésie ? Est-ce que Booba vaut Baudelaire ? Tour à tour, clash, battle, discussion sur le fond et la forme, une pièce inédite et surprenante !
+[url=https://www.billetreduc.com/356942/evt.htm]Réservez dès à présent[/url]"
+metadata/_custom_type_script = "uid://cpdfqbm5ysfpj"
+
+[sub_resource type="Environment" id="Environment_u3yai"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 2.52
+glow_hdr_threshold = 1.12
+glow_hdr_scale = 0.3
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_f8y3u"]
+clip_count = 2
+clip_0/name = &"Walk"
+clip_0/stream = ExtResource("37_samc1")
+clip_0/auto_advance = 0
+clip_1/name = &"Battle"
+clip_1/stream = ExtResource("38_oaehd")
+clip_1/auto_advance = 0
+_transitions = {
+Vector2i(0, 1): {
+"fade_beats": 1.0,
+"fade_mode": 3,
+"from_time": 1,
+"to_time": 1
+},
+Vector2i(1, 0): {
+"fade_beats": 1.0,
+"fade_mode": 4,
+"from_time": 1,
+"to_time": 0
+}
+}
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_53riq"]
+shuffle = true
+stream_count = 8
+stream_0 = ExtResource("39_r5f7e")
+stream_1 = ExtResource("40_wp8k7")
+stream_2 = ExtResource("41_na3no")
+stream_3 = ExtResource("42_07udg")
+stream_4 = ExtResource("43_4wtct")
+stream_5 = ExtResource("44_dlbli")
+stream_6 = ExtResource("45_2hox4")
+stream_7 = ExtResource("46_84hvi")
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_km5ld")
+gordon_data = SubResource("Resource_4c15r")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="BlackColorRect" type="ColorRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 0.7)
+repeat_size = Vector2(506, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(620, 166)
+texture = ExtResource("1_vonw3")
+
+[node name="ForegroundSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1753, 0)
+texture = ExtResource("2_oi3di")
+
+[node name="NorthWall" type="StaticBody2D" parent="."]
+position = Vector2(134, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NorthWall"]
+position = Vector2(1494.75, -28)
+shape = SubResource("RectangleShape2D_0b4ue")
+debug_color = Color(1, 0.615686, 0.482353, 0.196078)
+
+[node name="SouthWall" type="StaticBody2D" parent="."]
+position = Vector2(1612, 198)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SouthWall"]
+shape = SubResource("RectangleShape2D_0b4ue")
+debug_color = Color(0.838689, 0.384921, 1.92523e-07, 0.42)
+
+[node name="Bouffon" parent="." instance=ExtResource("12_ait7k")]
+position = Vector2(2563, -37)
+
+[node name="Spawners" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="FirstSpectatorSpawner" parent="Spawners" instance=ExtResource("5_i2t4f")]
+unique_name_in_owner = true
+position = Vector2(468, 44)
+packed_scene = ExtResource("7_8cye3")
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="ZoneSpawner" parent="Spawners" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("7_fedht")]
+position = Vector2(618, 80)
+trigger_zone = NodePath("../../Zones/FirstWaveTriggerZone")
+packed_scene = ExtResource("7_8cye3")
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="ZoneSpawner2" parent="Spawners" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("7_fedht")]
+position = Vector2(176, 57)
+trigger_zone = NodePath("../../Zones/FirstWaveTriggerZone")
+packed_scene = ExtResource("7_8cye3")
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="ZoneSpawner3" parent="Spawners" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("7_fedht")]
+position = Vector2(177, 82)
+trigger_zone = NodePath("../../Zones/FirstWaveTriggerZone")
+packed_scene = ExtResource("8_4c15r")
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="ZoneSpawner4" parent="Spawners" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("7_fedht")]
+position = Vector2(895, 43)
+trigger_zone = NodePath("../../Zones/SecondWaveTriggerZone")
+packed_scene = ExtResource("8_4c15r")
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="ZoneSpawner5" parent="Spawners" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("7_fedht")]
+position = Vector2(877, 86)
+trigger_zone = NodePath("../../Zones/SecondWaveTriggerZone")
+packed_scene = ExtResource("7_8cye3")
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="ZoneSpawner6" parent="Spawners" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("7_fedht")]
+position = Vector2(1376, 88)
+trigger_zone = NodePath("../../Zones/SecondWaveTriggerZone")
+packed_scene = ExtResource("7_8cye3")
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="ZoneSpawner7" parent="Spawners" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("7_fedht")]
+position = Vector2(1415, 72)
+trigger_zone = NodePath("../../Zones/SecondWaveTriggerZone")
+packed_scene = ExtResource("7_8cye3")
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="ZoneSpawner8" parent="Spawners" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("7_fedht")]
+position = Vector2(1360, 44)
+trigger_zone = NodePath("../../Zones/SecondWaveTriggerZone")
+packed_scene = ExtResource("8_4c15r")
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="ZoneSpawner10" parent="Spawners" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("7_fedht")]
+position = Vector2(1742, 44)
+trigger_zone = NodePath("../../Zones/MeetOphelieTriggerZone")
+packed_scene = ExtResource("8_4c15r")
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="ZoneSpawner11" parent="Spawners" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("7_fedht")]
+position = Vector2(1289, 40)
+trigger_zone = NodePath("../../Zones/MeetOphelieTriggerZone")
+packed_scene = ExtResource("8_4c15r")
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="ZoneSpawner12" parent="Spawners" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("7_fedht")]
+position = Vector2(1293, 78)
+trigger_zone = NodePath("../../Zones/MeetOphelieTriggerZone")
+packed_scene = ExtResource("7_8cye3")
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="OphelieSpawner" parent="Spawners" instance=ExtResource("5_i2t4f")]
+unique_name_in_owner = true
+position = Vector2(1742, 87)
+packed_scene = ExtResource("9_4c15r")
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="Zones" type="Node2D" parent="."]
+
+[node name="MeetSpectatorTriggerZone" parent="Zones" instance=ExtResource("10_2orkt")]
+position = Vector2(463, 1)
+blocking = true
+
+[node name="FirstWaveTriggerZone" parent="Zones" instance=ExtResource("10_2orkt")]
+unique_name_in_owner = true
+position = Vector2(601, 0)
+blocking = true
+
+[node name="NiceWalkTriggerZone" parent="Zones" instance=ExtResource("10_2orkt")]
+position = Vector2(910, 0)
+
+[node name="SecondWaveTriggerZone" parent="Zones" instance=ExtResource("10_2orkt")]
+unique_name_in_owner = true
+position = Vector2(1309, 0)
+blocking = true
+
+[node name="MeetOphelieTriggerZone" parent="Zones" instance=ExtResource("10_2orkt")]
+unique_name_in_owner = true
+position = Vector2(1693, 0)
+blocking = true
+
+[node name="QuestionGordonTriggerZone" parent="Zones" instance=ExtResource("10_2orkt")]
+unique_name_in_owner = true
+position = Vector2(2064, 0)
+blocking = true
+
+[node name="PosterZone" parent="Zones" instance=ExtResource("10_2orkt")]
+position = Vector2(2326, 0)
+
+[node name="SaluteZone" parent="Zones" instance=ExtResource("10_2orkt")]
+position = Vector2(2853, 1)
+
+[node name="Lights" type="Node2D" parent="."]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Lights"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(517, -52)
+occluder = SubResource("OccluderPolygon2D_fedht")
+
+[node name="AlternateSmallLight2D" parent="Lights" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("17_fedht")]
+position = Vector2(508, -52)
+trigger_zone = NodePath("../../Zones/FirstWaveTriggerZone")
+
+[node name="AlternateSmallLight2D2" parent="Lights" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("17_fedht")]
+position = Vector2(535, -52)
+trigger_zone = NodePath("../../Zones/FirstWaveTriggerZone")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Lights"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1023, -52)
+occluder = SubResource("OccluderPolygon2D_fedht")
+
+[node name="AlarmLight" parent="Lights" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("17_fedht")]
+position = Vector2(1015, -53)
+trigger_zone = NodePath("../../Zones/SecondWaveTriggerZone")
+
+[node name="AlternateSmallLight2D3" parent="Lights" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("17_fedht")]
+position = Vector2(1520, -53)
+trigger_zone = NodePath("../../Zones/MeetOphelieTriggerZone")
+
+[node name="AlternateSmallLight2D4" parent="Lights" node_paths=PackedStringArray("trigger_zone") instance=ExtResource("17_fedht")]
+position = Vector2(1549, -52)
+trigger_zone = NodePath("../../Zones/MeetOphelieTriggerZone")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Lights"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1530, -52)
+occluder = SubResource("OccluderPolygon2D_4c15r")
+
+[node name="Posters" type="Node2D" parent="."]
+
+[node name="PosterArea" parent="Posters" instance=ExtResource("12_42xju")]
+position = Vector2(2253, -35)
+show_resource = SubResource("Resource_07udg")
+
+[node name="PosterArea2" parent="Posters" instance=ExtResource("12_42xju")]
+position = Vector2(2350, -35)
+show_resource = SubResource("Resource_4wtct")
+
+[node name="PosterArea3" parent="Posters" instance=ExtResource("12_42xju")]
+position = Vector2(2423, -35)
+show_resource = SubResource("Resource_dlbli")
+
+[node name="Gameplay" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Public" parent="." instance=ExtResource("24_ut2i6")]
+position = Vector2(3201, 35)
+
+[node name="Shadow" type="PointLight2D" parent="."]
+position = Vector2(3070, 3)
+energy = 0.45
+blend_mode = 1
+texture = ExtResource("25_qw2y7")
+
+[node name="ShowLight" type="PointLight2D" parent="."]
+position = Vector2(3066, -20)
+energy = 1.11
+texture = ExtResource("26_qw2y7")
+
+[node name="ShowLight2" type="PointLight2D" parent="."]
+position = Vector2(3044, 111)
+texture = ExtResource("26_qw2y7")
+
+[node name="Curtain" type="Sprite2D" parent="."]
+position = Vector2(2851, 5)
+texture = ExtResource("25_0mnfp")
+
+[node name="AttackManager" parent="." instance=ExtResource("10_8b0r0")]
+
+[node name="CountEnnemyTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.5
+
+[node name="PosterLayer" parent="." instance=ExtResource("28_6btg4")]
+unique_name_in_owner = true
+visible = false
+
+[node name="UI" parent="." instance=ExtResource("6_1ainy")]
+unique_name_in_owner = true
+visible = true
+
+[node name="FPSLabel" parent="UI" instance=ExtResource("12_h6smj")]
+
+[node name="InteractActionIcon" type="TextureRect" parent="UI"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -131.0
+offset_top = -82.0
+offset_right = -31.0
+offset_bottom = -42.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("27_sl4om")
+action_name = &"interact"
+favor_mouse = false
+metadata/_custom_type_script = "uid://dtgqdgtnlbmmo"
+
+[node name="MobileInputContainer" type="Control" parent="UI"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -262.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Virtual Joystick" type="Control" parent="UI/MobileInputContainer"]
+layout_mode = 2
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 262.0
+script = ExtResource("22_uuqa8")
+metadata/_custom_type_script = "uid://236ca8c8cavm"
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MobileInputContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 300
+
+[node name="Control" type="Control" parent="UI/MobileInputContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="AButton" parent="UI/MobileInputContainer/MarginContainer/Control" instance=ExtResource("23_samc1")]
+layout_mode = 1
+anchors_preset = 3
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -254.0
+offset_top = -190.0
+offset_right = -178.0
+offset_bottom = -118.0
+grow_vertical = 0
+action_names = PackedStringArray("crouch")
+
+[node name="EButton" parent="UI/MobileInputContainer/MarginContainer/Control" instance=ExtResource("23_samc1")]
+layout_mode = 1
+anchors_preset = 3
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -336.0
+offset_top = -109.0
+offset_right = -260.0
+offset_bottom = -37.0
+grow_vertical = 0
+texture_normal = ExtResource("24_oaehd")
+action_names = PackedStringArray("interact")
+
+[node name="EscButton" parent="UI/MobileInputContainer/MarginContainer/Control" instance=ExtResource("23_samc1")]
+layout_mode = 1
+anchors_preset = 3
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -629.0
+offset_top = -106.0
+offset_right = -553.0
+offset_bottom = -34.0
+grow_vertical = 0
+texture_normal = ExtResource("36_4wtct")
+action_names = PackedStringArray("toggle_menu", "ui_cancel")
+
+[node name="SpaceButton" parent="UI/MobileInputContainer/MarginContainer/Control" instance=ExtResource("23_samc1")]
+layout_mode = 1
+anchors_preset = 3
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -770.0
+offset_top = -93.0
+offset_right = -674.0
+offset_bottom = -21.0
+grow_vertical = 0
+texture_normal = ExtResource("37_dlbli")
+action_names = PackedStringArray("shoot", "next_dialogue", "ui_accept")
+
+[node name="Menu" parent="." instance=ExtResource("9_i2t4f")]
+unique_name_in_owner = true
+
+[node name="RestartButton" parent="Menu/PanelContainer/MarginContainer/VBoxContainer" index="0"]
+text = "Recommencer
+"
+
+[node name="LeaderBoardButton" parent="Menu/PanelContainer/MarginContainer/VBoxContainer" index="1"]
+text = "Meilleurs scores"
+
+[node name="ResetProgressButton" type="Button" parent="Menu/PanelContainer/MarginContainer/VBoxContainer" index="2"]
+layout_mode = 2
+text = "Réinitialiser la progression
+(Et revoir les dialogues stupides)"
+
+[node name="CancelButton" parent="Menu/PanelContainer/MarginContainer/VBoxContainer" index="3"]
+text = "Annuler"
+
+[node name="QuitButton" parent="Menu/PanelContainer/MarginContainer/VBoxContainer" index="4"]
+text = "Quitter"
+
+[node name="GameoverLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="Panel" type="Panel" parent="GameoverLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -222.5
+offset_top = -126.0
+offset_right = 222.5
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameoverLabel" type="Label" parent="GameoverLayer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.5
+offset_top = -24.5
+offset_right = 98.5
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_8cye3")
+theme_override_font_sizes/font_size = 60
+text = "Game Over
+"
+
+[node name="EndPanelLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="Camera2D" parent="." instance=ExtResource("4_0b4ue")]
+unique_name_in_owner = true
+position = Vector2(167, -5)
+
+[node name="GordonSpawner" parent="Camera2D" instance=ExtResource("5_i2t4f")]
+unique_name_in_owner = true
+position = Vector2(2390, 76)
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="GordonSpawner2" parent="Camera2D" instance=ExtResource("5_i2t4f")]
+unique_name_in_owner = true
+position = Vector2(-50, 76)
+packed_scene = ExtResource("3_oi3di")
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="IntroGordonSpawner" parent="Camera2D" instance=ExtResource("5_i2t4f")]
+unique_name_in_owner = true
+position = Vector2(0, 66)
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="Gordon2Spawner" parent="Camera2D" instance=ExtResource("5_i2t4f")]
+unique_name_in_owner = true
+position = Vector2(2941, 34)
+future_parent_path = NodePath("../../Gameplay")
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+position = Vector2(2154, -2)
+zoom = Vector2(4, 4)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_u3yai")
+
+[node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = SubResource("AudioStreamInteractive_f8y3u")
+volume_db = -16.0
+autoplay = true
+
+[node name="ApplauseAudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(3219, 56)
+stream = SubResource("AudioStreamPlaylist_53riq")
+autoplay = true
+max_distance = 850.0
+max_polyphony = 2
+
+[node name="ApplauseAudioStreamPlayer2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(3219, 56)
+stream = SubResource("AudioStreamPlaylist_53riq")
+autoplay = true
+max_distance = 600.0
+max_polyphony = 2
+
+[node name="ApplauseAudioStreamPlayer3" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(3219, 56)
+stream = SubResource("AudioStreamPlaylist_53riq")
+autoplay = true
+max_distance = 600.0
+max_polyphony = 2
+
+[connection signal="entered" from="Zones/MeetSpectatorTriggerZone" to="." method="_on_meet_spectator_trigger_zone_entered"]
+[connection signal="entered" from="Zones/FirstWaveTriggerZone" to="." method="_on_first_wave_trigger_zone_entered"]
+[connection signal="entered" from="Zones/NiceWalkTriggerZone" to="." method="_on_nice_walk_trigger_zone_entered"]
+[connection signal="entered" from="Zones/SecondWaveTriggerZone" to="." method="_on_second_wave_trigger_zone_entered"]
+[connection signal="entered" from="Zones/MeetOphelieTriggerZone" to="." method="_on_meet_ophelie_trigger_zone_entered"]
+[connection signal="entered" from="Zones/QuestionGordonTriggerZone" to="." method="_on_question_gordon_trigger_zone_entered"]
+[connection signal="entered" from="Zones/PosterZone" to="." method="_on_poster_zone_entered"]
+[connection signal="entered" from="Zones/SaluteZone" to="." method="_on_salute_zone_entered"]
+[connection signal="timeout" from="CountEnnemyTimer" to="." method="_on_count_ennemy_timer_timeout"]
+[connection signal="restart_requested" from="Menu" to="." method="_on_menu_restart_requested"]
+[connection signal="visibility_changed" from="Menu" to="." method="_on_menu_visibility_changed"]
+[connection signal="pressed" from="Menu/PanelContainer/MarginContainer/VBoxContainer/ResetProgressButton" to="." method="_on_reset_progress_button_pressed"]
+[connection signal="spawned" from="Camera2D/GordonSpawner" to="." method="_on_gordon_spawner_spawned"]
+[connection signal="spawned" from="Camera2D/IntroGordonSpawner" to="." method="_on_intro_gordon_spawner_spawned"]
+[connection signal="spawned" from="Camera2D/Gordon2Spawner" to="." method="_on_gordon_2_spawner_spawned"]
+
+[editable path="Menu"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dtowofmrotf7a"
+path="res://.godot/imported/bdm.dialogue-1c28b93d1d416e55b3849a069b6d8d70.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/shows/bdm.dialogue"
+dest_files=["res://.godot/imported/bdm.dialogue-1c28b93d1d416e55b3849a069b6d8d70.tres"]
+
+[params]
+
+defaults=true

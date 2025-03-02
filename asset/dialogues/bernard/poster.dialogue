@@ -1,0 +1,16 @@
+~ start
+do gordon.controlled = false
+do gordon.stop()
+do! play("beauvoir/gordon regarde")
+Beauvoir: Regarde, Gordon !
+do! play("bernard/ou ca gordon")
+Bernard: Où ça, Gordon ?
+Beauvoir: À nouveau ces posters publicitaires !
+Bernard: Les affiches de spectacle sont de retour ! Cela signifie que je m'approche du but !
+Beauvoir: Je me demande bien ce qu'ils ont à l'affiche pour nous, Gordon !
+Beauvoir: Je serais toi, j'irais jeter un coup d'oeil.
+do! play("bernard/oh que oui")
+Bernard: Je n'y manquerai pas, Gordon !
+do gordon.controlled = true
+do Progress.write(Progress.POSTER_DONE, true)
+=> END

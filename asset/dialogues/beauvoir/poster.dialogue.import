@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://d1oorrgh0f8wt"
+path="res://.godot/imported/poster.dialogue-38e2c72c856557a3712bbeff9fa6995a.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/beauvoir/poster.dialogue"
+dest_files=["res://.godot/imported/poster.dialogue-38e2c72c856557a3712bbeff9fa6995a.tres"]
+
+[params]
+
+defaults=true

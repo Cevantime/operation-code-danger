@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://domvrl84fjoom"
+path="res://.godot/imported/attention gordon.ogg-d4d718bba10de1b9a1f70600edd2b643.oggvorbisstr"
+
+[deps]
+
+source_file="res://asset/sounds/bernard/attention gordon.ogg"
+dest_files=["res://.godot/imported/attention gordon.ogg-d4d718bba10de1b9a1f70600edd2b643.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

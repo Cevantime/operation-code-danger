@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn0d0sf6v1vsb"]
+
+[ext_resource type="PackedScene" uid="uid://cbg6ocq25s3nm" path="res://ennemy/states/ennemy_state.tscn" id="1_rqpxl"]
+[ext_resource type="Script" path="res://ennemy/states/react_to_shot.gd" id="2_rooev"]
+
+[node name="ReactToShot" instance=ExtResource("1_rqpxl")]
+script = ExtResource("2_rooev")
+chances_to_dodge = 0.3

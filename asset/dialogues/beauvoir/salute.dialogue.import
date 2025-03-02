@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://deeo5www86oav"
+path="res://.godot/imported/salute.dialogue-2d3048568d4ae8ee1ecc6c7d466cf02d.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/beauvoir/salute.dialogue"
+dest_files=["res://.godot/imported/salute.dialogue-2d3048568d4ae8ee1ecc6c7d466cf02d.tres"]
+
+[params]
+
+defaults=true

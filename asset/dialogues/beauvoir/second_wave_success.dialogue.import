@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bjmvp08vs84wb"
+path="res://.godot/imported/second_wave_success.dialogue-b5782cb50c937832f234bcc1d3241b90.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/beauvoir/second_wave_success.dialogue"
+dest_files=["res://.godot/imported/second_wave_success.dialogue-b5782cb50c937832f234bcc1d3241b90.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bjhl733xt2dyv"
+path="res://.godot/imported/intro.dialogue-44e620a6b0498f890e783ca3ea8accf4.tres"
+
+[deps]
+
+source_file="res://asset/dialogues/beauvoir/intro.dialogue"
+dest_files=["res://.godot/imported/intro.dialogue-44e620a6b0498f890e783ca3ea8accf4.tres"]
+
+[params]
+
+defaults=true

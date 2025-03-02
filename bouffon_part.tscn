@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://bccwtw0suhnkl"]
+
+[ext_resource type="Texture2D" uid="uid://co1tywrfbkny8" path="res://asset/big_light.png" id="1_ss6t7"]
+[ext_resource type="Shader" path="res://glow.gdshader" id="2_1x0lj"]
+[ext_resource type="Texture2D" uid="uid://dy1gfw6b7te5l" path="res://asset/bouffon_off.png" id="3_stlmx"]
+[ext_resource type="Texture2D" uid="uid://x4iwqk6olpv3" path="res://asset/bouffon.png" id="4_ukxn7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y3bce"]
+shader = ExtResource("2_1x0lj")
+
+[sub_resource type="Animation" id="Animation_1x0lj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BouffonText:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ss6t7"]
+resource_name = "on_off"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BouffonText:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_stlmx"]
+_data = {
+&"RESET": SubResource("Animation_1x0lj"),
+&"on_off": SubResource("Animation_ss6t7")
+}
+
+[node name="Bouffon" type="Node2D"]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-346, -106)
+texture = ExtResource("1_ss6t7")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(-173, -106)
+texture = ExtResource("1_ss6t7")
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(-3.00003, -105)
+texture = ExtResource("1_ss6t7")
+
+[node name="BouffonTextOff" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_y3bce")
+texture = ExtResource("3_stlmx")
+
+[node name="BouffonText" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_y3bce")
+texture = ExtResource("4_ukxn7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_stlmx")
+}
+autoplay = "on_off"

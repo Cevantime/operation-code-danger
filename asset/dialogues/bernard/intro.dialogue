@@ -1,0 +1,48 @@
+~ beginning
+do wait(1)
+do! gordon.spawn_and_crouch()
+Bernard: YYYYAAAAAHHHH !!![next=2]
+do gordon.go_left()
+do wait(0.3)
+do gordon.stop()
+do wait(0.5)
+do gordon.go_right()
+do wait(0.3)
+do gordon.stop()
+do! play("bernard/hein")
+do gordon.play_emotion("surprised")
+do wait(0.3)
+do! play("bernard/gordon")
+Bernard: Gordon ? [next=1]
+do! play("bernard/oh mon dieu")
+Bernard: Nom d'une pipe, Gordon. Tu m'entends ?
+do! play("beauvoir/mais qu est ce que c est")
+Beauvoir: Comment ça fonctionne, ce truc ?
+do gordon.play_emotion("question")
+Bernard: Gordon, tu m'entends ? Moi je t'entends, Gordon ! Réponds-moi ![next=2]
+do! play("beauvoir/gordon")
+Beauvoir: Ah ! ça y est. Il faut juste que j'appuie sur ce bouton, là. Et, hop ! Le tour est joué.
+do! play("beauvoir/ha ha ha")
+do gordon.play_emotion("question")
+Bernard: Que fais-tu, Gordon ?
+Beauvoir: Gordon, tu me reçois ?
+do! play("bernard/oui gordon")
+do gordon.play_emotion("happy")
+Bernard: Je te reçois cinq sur cinq, Gordon. 
+Beauvoir: Bien, ces talky-walky transmetteurs fonctionnent à merveille. Que c'est beau, la technologie!
+Bernard: En effet, Gordon !
+do wait(1)
+Bernard: Dis-moi, Gordon. Il semblerait que je me sois fourré dans un sacré pétrin, à mon tour.
+do! play("beauvoir/ha ha ha")
+Beauvoir: En effet, Gordon ! Il semblerait que le spectacle continue. Et désormais, c'est toi la vedette !
+do! play("bernard/oh mon dieu")
+Bernard: Oh !... Mais c'est que j'ai le trac, moi, Gordon.
+Beauvoir: Tout se passera bien, Gordon. Si tu manipules ton pistolet aussi bien que tu expliques comment faire, ça devrait être du gâteau, Gordon.
+do gordon.play_emotion("love")
+Bernard: Tu es trop aimable. Voilà, qui me réchauffe le coeur.
+do! play("beauvoir/ha ha ha")
+Beauvoir: Bien parlé ! Tu sais ce que tu as à faire, Gordon. Tout droit vers l'Est. Tu en mets plein la vue aux spectateurs et tu me rejoins !
+Bernard: Toujours au Bouffon Théâtre ?
+Beauvoir: Toujours, Gordon ! 26 rue de Meaux. Paris 19e. Je t'y attends !
+do Progress.write("intro_done", true)
+=> END
